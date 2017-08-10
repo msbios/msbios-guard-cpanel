@@ -1,0 +1,48 @@
+{
+  "name": "msbios/guard-cpanel",
+  "description": "MSBios Guard CPanel",
+  "license": "GPL",
+  "keywords": [
+    "php"
+  ],
+  "homepage": "https://github.com/msbios/msbios-guard-cpanel",
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "name": "Judzhin Miles",
+      "email": "info@msbios.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "MSBios\\Guard\\CPanel\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MSBiosTest\\Guard\\CPanel\\": "tests/"
+    }
+  },
+  "require": {
+    "zendframework/zend-loader": "^2.5",
+    "zendframework/zend-servicemanager": "^3.3",
+    "zendframework/zend-modulemanager": "^2.8",
+    "msbios/msbios": "^0.0.1",
+    "msbios/guard-resource": "^0.0.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.7",
+    "zendframework/zend-test": "^3.1",
+    "squizlabs/php_codesniffer": "^3.0",
+    "msbios/cpanel": "^0.0.1"
+  },
+  "scripts": {
+    "cs-check": "phpcs",
+    "cs-fix": "phpcbf",
+    "test": [
+      "@cs-check",
+      "phpunit"
+    ],
+    "commit": "git add . && git commit -a -m \"Lazy Composer Commiter\" && git push"
+  }
+}
