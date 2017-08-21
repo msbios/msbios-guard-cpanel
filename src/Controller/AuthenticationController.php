@@ -4,13 +4,12 @@
  * @author Judzhin Miles <info[woof-woof]msbios.com>
  *
  */
+
 namespace MSBios\Guard\CPanel\Controller;
 
 use DoctrineModule\Authentication\Adapter\ObjectRepository;
-
 use MSBios\CPanel\Mvc\Controller\ActionControllerInterface;
 use MSBios\Guard\CPanel\Form\LoginForm;
-use MSBios\Guard\CPanel\Module;
 use Zend\Authentication\AuthenticationService;
 use Zend\Authentication\Result;
 use Zend\Mvc\Controller\AbstractActionController;
@@ -45,13 +44,18 @@ class AuthenticationController extends AbstractActionController implements Actio
      */
     public function loginAction()
     {
-
-        /** @var array $variables */
-        $variables = [
+        /** @var ViewModel $viewModel */
+        $viewModel = new ViewModel([
             'form' => $this->serviceManager
                 ->get('FormElementManager')
                 ->get(LoginForm::class)
-        ];
+        ]);
+
+        $viewModel->setTemplate(
+            $this->serviceManager
+                ->get(\MSBios\Guard\Module::class)
+                ->get('template')
+        );
 
         if ($this->getRequest()->isPost()) {
             /** @var ObjectRepository $adapter */
@@ -69,18 +73,12 @@ class AuthenticationController extends AbstractActionController implements Actio
             if ($authenticationResult->isValid()) {
                 return $this->redirect()->toRoute('cpanel');
             } else {
-                $variables['messages'] = $authenticationResult->getMessages();
+                $viewModel->setVariable(
+                    'messages', $authenticationResult->getMessages()
+                );
             }
         }
 
-        /** @var ViewModel $viewModel */
-        $viewModel = new ViewModel($variables);
-
-        $viewModel->setTemplate(
-            $this->serviceManager
-                ->get(\MSBios\Guard\Module::class)
-                ->get('template')
-        );
 
         return $viewModel;
     }

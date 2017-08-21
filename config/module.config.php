@@ -133,14 +133,14 @@ return [
 
     'service_manager' => [
         'invokables' => [
-
             // Listeners
-            Listener\ForbiddenListener::class =>
-                Listener\ForbiddenListener::class,
+            Listener\ForbiddenListener::class
         ],
         'factories' => [
             Module::class =>
                 Factory\ModuleFactory::class,
+
+            // Providers
             Provider\Identity\AuthenticationProvider::class =>
                 Factory\AuthenticationProviderFactory::class
         ]
@@ -207,7 +207,7 @@ return [
     ],
 
     \MSBios\CPanel\Module::class => [
-        \MSBios\CPanel\Config\Config::CONTROLLER => [ // key controller
+        'controllers' => [ // key controller
             Controller\ResourceController::class => [
                 'route_name' => 'cpanel/resource',
                 'resource_class' => \MSBios\Guard\Resource\Entity\Resource::class,
@@ -249,26 +249,6 @@ return [
                 ]
             ]
         ],
-
-        'guard_listeners' => [
-            \MSBios\Guard\Listener\ControllerListener::class => [
-                [
-                    'controller' => Controller\AuthenticationController::class,
-                    'action' => 'login',
-                    'roles' => ['GUEST', 'DEVELOPER']
-                ], [
-                    'controller' => Controller\AuthenticationController::class,
-                    'action' => 'logout',
-                    'roles' => ['GUEST', 'DEVELOPER']
-                ], [
-                    'controller' => Controller\ResourceController::class,
-                    'roles' => ['DEVELOPER']
-                ], [
-                    'controller' => Controller\UserController::class,
-                    'roles' => ['DEVELOPER']
-                ]
-            ],
-        ]
     ],
 
     Module::class => [
@@ -279,9 +259,9 @@ return [
         'listeners' => [
             [
                 'listener' => Listener\ForbiddenListener::class,
-                'method' => 'onUnAuthorized',
-                'event' => \MSBios\Guard\Listener\UnAuthorizedListener::EVENT_UNAUTHORIZED,
-                'priority' => 1,
+                'method' => 'onDispatchError',
+                'event' => \Zend\Mvc\MvcEvent::EVENT_DISPATCH_ERROR,
+                'priority' => -110,
             ],
         ]
     ],
