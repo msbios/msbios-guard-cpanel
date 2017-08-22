@@ -49,6 +49,19 @@ return [
                             ]
                         ]
                     ],
+                    'role' => [
+                        'type' => Segment::class,
+                        'options' => [
+                            'route' => 'role[/[:action[/[:id[/]]]]]',
+                            'defaults' => [
+                                'controller' => Controller\RoleController::class,
+                            ],
+                            'constraints' => [
+                                'action' => 'add|edit|drop',
+                                'id' => '[0-9]+'
+                            ]
+                        ]
+                    ],
                     'user' => [
                         'type' => Segment::class,
                         'options' => [
@@ -77,6 +90,8 @@ return [
             Controller\AuthenticationController::class =>
                 Factory\AuthenticationControllerFactory::class,
             Controller\ResourceController::class =>
+                \MSBios\CPanel\Factory\LazyActionControllerFactory::class,
+            Controller\RoleController::class =>
                 \MSBios\CPanel\Factory\LazyActionControllerFactory::class,
             Controller\UserController::class =>
                 \MSBios\CPanel\Factory\LazyActionControllerFactory::class,
@@ -123,7 +138,18 @@ return [
                     ],
                     'role' => [
                         'label' => _('Roles'),
-                        'uri' => '#'
+                        'route' => 'cpanel/role',
+                        'pages' => [
+                            [
+                                'label' => _('Create new role'),
+                                'route' => 'cpanel/role',
+                                'action' => 'add'
+                            ], [
+                                'label' => _('Edit user role'),
+                                'route' => 'cpanel/role',
+                                'action' => 'edit'
+                            ],
+                        ]
                     ],
                     'rule' => [
                         'label' => _('Rules'),
@@ -217,6 +243,12 @@ return [
                 'form_element' => \MSBios\Guard\Resource\Form\UserForm::class,
                 'item_count_per_page' => 10 // optional
             ],
+            Controller\RoleController::class => [
+                'route_name' => 'cpanel/role',
+                'resource_class' => \MSBios\Guard\Resource\Entity\User::class,
+                'form_element' => \MSBios\Guard\Resource\Form\UserForm::class,
+                'item_count_per_page' => 10 // optional
+            ],
             Controller\UserController::class => [
                 'route_name' => 'cpanel/user',
                 'resource_class' => \MSBios\Guard\Resource\Entity\User::class,
@@ -239,6 +271,7 @@ return [
             \MSBios\Guard\Provider\ResourceProvider::class => [
                 Controller\AuthenticationController::class => [],
                 Controller\ResourceController::class => [],
+                Controller\RoleController::class => [],
                 Controller\UserController::class => []
             ]
         ],
@@ -248,6 +281,7 @@ return [
                 'allow' => [
                     [['GUEST'], Controller\AuthenticationController::class],
                     [['DEVELOPER'], Controller\ResourceController::class],
+                    [['DEVELOPER'], Controller\RoleController::class],
                     [['DEVELOPER'], Controller\UserController::class]
                 ],
                 'deny' => []
