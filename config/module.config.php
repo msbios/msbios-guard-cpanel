@@ -74,9 +74,12 @@ return [
         ],
 
         'factories' => [
-            Controller\AuthenticationController::class => Factory\AuthenticationControllerFactory::class,
-            Controller\ResourceController::class => \MSBios\CPanel\Factory\LazyActionControllerFactory::class,
-            Controller\UserController::class => \MSBios\CPanel\Factory\LazyActionControllerFactory::class,
+            Controller\AuthenticationController::class =>
+                Factory\AuthenticationControllerFactory::class,
+            Controller\ResourceController::class =>
+                \MSBios\CPanel\Factory\LazyActionControllerFactory::class,
+            Controller\UserController::class =>
+                \MSBios\CPanel\Factory\LazyActionControllerFactory::class,
         ]
     ],
 
@@ -234,13 +237,19 @@ return [
 
         'resource_providers' => [
             \MSBios\Guard\Provider\ResourceProvider::class => [
+                Controller\AuthenticationController::class => [],
+                Controller\ResourceController::class => [],
                 Controller\UserController::class => []
             ]
         ],
 
         'rule_providers' => [
             \MSBios\Guard\Provider\RuleProvider::class => [
-                'allow' => [],
+                'allow' => [
+                    [['GUEST'], Controller\AuthenticationController::class],
+                    [['DEVELOPER'], Controller\ResourceController::class],
+                    [['DEVELOPER'], Controller\UserController::class]
+                ],
                 'deny' => []
             ]
         ],

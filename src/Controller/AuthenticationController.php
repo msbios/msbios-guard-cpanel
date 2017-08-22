@@ -10,6 +10,7 @@ namespace MSBios\Guard\CPanel\Controller;
 use DoctrineModule\Authentication\Adapter\ObjectRepository;
 use MSBios\CPanel\Mvc\Controller\ActionControllerInterface;
 use MSBios\Guard\CPanel\Form\LoginForm;
+use MSBios\Guard\CPanel\Module;
 use Zend\Authentication\AuthenticationService;
 use Zend\Authentication\Result;
 use Zend\Mvc\Controller\AbstractActionController;
@@ -44,18 +45,9 @@ class AuthenticationController extends AbstractActionController implements Actio
      */
     public function loginAction()
     {
-        /** @var ViewModel $viewModel */
-        $viewModel = new ViewModel([
-            'form' => $this->serviceManager
-                ->get('FormElementManager')
-                ->get(LoginForm::class)
-        ]);
 
-        $viewModel->setTemplate(
-            $this->serviceManager
-                ->get(\MSBios\Guard\Module::class)
-                ->get('template')
-        );
+        /** @var ViewModel $viewModel */
+        $viewModel = new ViewModel;
 
         if ($this->getRequest()->isPost()) {
             /** @var ObjectRepository $adapter */
@@ -79,6 +71,22 @@ class AuthenticationController extends AbstractActionController implements Actio
             }
         }
 
+        $this->layout(
+            $this->serviceManager->get(Module::class)
+                ->get('default_layout_authorized')
+        );
+
+        $viewModel->setVariable(
+            'form', $this->serviceManager
+                ->get('FormElementManager')
+                ->get(LoginForm::class)
+        );
+
+        $viewModel->setTemplate(
+            $this->serviceManager
+                ->get(\MSBios\Guard\Module::class)
+                ->get('template')
+        );
 
         return $viewModel;
     }

@@ -21,8 +21,8 @@ $this->headScript()
                 <h4><?= $this->translate('Information message'); ?></h4>
                 <p><?= $this->translate('The database is not created at the moment no resource, click "Create new resource" to start working with the resource.'); ?></p>
                 <p>
-                    <?php if ($this->isAllowed('RESOURCE', 'CREATE')): ?>
-                        <a href="<?= $this->url($this->config->getRouteName(), ['action' => 'add']); ?>"
+                    <?php if ($this->isAllowed(Controller\ResourceController::class, 'add')): ?>
+                        <a href="<?= $this->url($this->config->get('route_name'), ['action' => 'add']); ?>"
                            class="btn btn-info"><?= $this->translate('Create new resource'); ?></a>
                     <?php endif; ?>
                 </p>
@@ -58,9 +58,9 @@ $this->headScript()
 
                             &nbsp;
 
-                            <?php if ($this->isAllowed('RESOURCE', 'CREATE')): ?>
-                                <a href="<?= $this->url($this->config->getRouteName(), ['action' => 'add']); ?>"
-                                   class="btn btn-success"><?= $this->translate('Create new resource'); ?></a>
+                            <?php if ($this->isAllowed(Controller\UserController::class, 'add')): ?>
+                                <a href="<?= $this->url($this->config->get('route_name'), ['action' => 'add']); ?>"
+                                   class="btn btn-success"><?= $this->translate('Create new user'); ?></a>
                             <?php endif; ?>
                         </div>
                     </div>
@@ -98,15 +98,15 @@ $this->headScript()
 
                                     <ul class="icons-list">
 
-                                        <?php if ($this->isAllowed('RESOURCE', 'EDIT')): ?>
+                                        <?php if ($this->isAllowed(Controller\ResourceController::class, 'EDIT')): ?>
                                             <li>
-                                                <a href="<?= $this->url($this->config->getRouteName(), ['action' => 'edit', 'id' => $item->getId()]); ?>">
+                                                <a href="<?= $this->url($this->config->get('route_name'), ['action' => 'edit', 'id' => $item->getId()]); ?>">
                                                     <i class="icon-pencil"></i>
                                                 </a>
                                             </li>
                                         <?php endif; ?>
 
-                                        <?php if ($this->isAllowed('RESOURCE', 'DELETE')): ?>
+                                        <?php if ($this->isAllowed(Controller\ResourceController::class, 'drop')): ?>
 
                                             <li class="text-danger-600">
                                                 <a href="#"
@@ -135,7 +135,7 @@ $this->headScript()
                                                     <button type="button" class="btn btn-default" data-dismiss="modal">
                                                         Cancel
                                                     </button>
-                                                    <a href="<?= $this->url($this->config->getRouteName(), ['action' => 'drop', 'id' => $item->getId()]); ?>" class="btn btn-primary">
+                                                    <a href="<?= $this->url($this->config->get('route_name'), ['action' => 'drop', 'id' => $item->getId()]); ?>" class="btn btn-primary">
                                                         Yes, delete it!
                                                     </a>
                                                 </div>
@@ -150,7 +150,7 @@ $this->headScript()
                     </table>
 
                     <?= $this->paginationControl($this->paginator, 'sliding', 'partial/pagination.phtml', [
-                        'route' => $this->config->getRouteName()
+                        'route' => $this->config->get('route_name')
                     ]); ?>
 
                 </div>

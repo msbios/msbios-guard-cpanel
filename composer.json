@@ -39,7 +39,7 @@
     "msbios/resource": "^0.0.1",
     "msbios/guard": "^0.0.16",
     "msbios/guard-resource": "^0.0.6",
-    "msbios/cpanel": "dev-master",
+    "msbios/cpanel": "^0.0.6",
     "msbios/debug": "^0.0.3"
   },
   "scripts": {

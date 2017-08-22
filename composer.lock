@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "047b1da635e682cc0109b25f62aaf60a",
+    "content-hash": "2e1927616341e7d240b83da96a065f68",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -2087,12 +2087,17 @@
         },
         {
             "name": "msbios/cpanel",
-            "version": "dev-master",
+            "version": "v0.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/msbios/msbios-cpanel.git",
+                "reference": "03dc918d76657d87b0f140731bac00dd4db9a3fb"
+            },
             "dist": {
-                "type": "path",
-                "url": "../msbios-cpanel",
-                "reference": "3ea59596d408debc144215ad8505df05b56a076d",
-                "shasum": null
+                "type": "zip",
+                "url": "https://api.github.com/repos/msbios/msbios-cpanel/zipball/03dc918d76657d87b0f140731bac00dd4db9a3fb",
+                "reference": "03dc918d76657d87b0f140731bac00dd4db9a3fb",
+                "shasum": ""
             },
             "require": {
                 "msbios/msbios": "^0.0.1",
@@ -2118,32 +2123,7 @@
                     "MSBios\\CPanel\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "MSBiosTest\\CPanel\\": "tests/"
-                }
-            },
-            "scripts": {
-                "cs-check": [
-                    "phpcs"
-                ],
-                "cs-fix": [
-                    "phpcbf"
-                ],
-                "test": [
-                    "@cs-check",
-                    "phpunit"
-                ],
-                "assets": [
-                    "cd bin && ln -s ../themes/limitless/public/ limitless"
-                ],
-                "serve": [
-                    "php -S 0.0.0.0:3107 -t bin bin/msbios-cpanel-module.php"
-                ],
-                "commit": [
-                    "git add . && git commit -a -m \"Lazy Composer Commiter\" && git push"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL"
             ],
@@ -2157,7 +2137,8 @@
             "homepage": "https://github.com/msbios/msbios-cpanel",
             "keywords": [
                 "php"
-            ]
+            ],
+            "time": "2017-08-22T13:13:30+00:00"
         },
         {
             "name": "msbios/debug",
@@ -5561,9 +5542,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "msbios/cpanel": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
