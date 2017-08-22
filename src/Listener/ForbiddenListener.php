@@ -6,11 +6,12 @@
 
 namespace MSBios\Guard\CPanel\Listener;
 
+use MSBios\CPanel\Mvc\Controller\ActionControllerInterface;
 use MSBios\Guard\CPanel\Form\LoginForm;
+use MSBios\Guard\CPanel\Module;
 use Zend\EventManager\EventInterface;
-use Zend\Router\RouteMatch;
 use Zend\ServiceManager\ServiceLocatorInterface;
-use Zend\View\Model\ViewModel;
+use Zend\View\Model\ModelInterface;
 
 /**
  * Class ForbiddenListener
@@ -19,50 +20,37 @@ use Zend\View\Model\ViewModel;
 class ForbiddenListener
 {
     /**
-     * @param EventInterface $event
+     * @param EventInterface $e
      */
-    public function onDispatchError(EventInterface $event)
+    public function onDispatchError(EventInterface $e)
     {
 
-
         /** @var string $error */
-        // $error = $event->getError();
+        $error = $e->getError();
 
-//        // r($error); die();
-//
-//        if (empty($error)) {
-//            return;
-//        }
-//
-//        /** @var ViewModel $viewModel */
-//        $viewModel = $event->getViewModel();
-//
-//        if (! $viewModel instanceof ViewModel) {
-//            return;
-//        }
-//
-//        /** @var RouteMatch $routeMatch */
-//        $routeMatch = $event->getRouteMatch();
-//
-//        if (is_null($routeMatch)) {
-//            return;
-//        }
-//
-//        /** @var ServiceLocatorInterface $serviceManager */
-//        $serviceManager = $event->getTarget()->getServiceManager();
-//
-//        // /** @var Config $options */
-//        // $options = $serviceManager->get(Module::class);
-//        //
-//        // /** @var \Reflection $reflection */
-//        // $reflection = new \ReflectionClass($routeMatch->getParam('controller'));
-//
-//        /** @var ViewModel $child */
-//        foreach ($viewModel->getChildren() as $child) {
-//            $child->setVariables([
-//                'form' => $serviceManager->get('FormElementManager')
-//                    ->get(LoginForm::class)
-//            ]);
-//        }
+        if (empty($error)) {
+            return;
+        }
+
+        /** @var ModelInterface $viewModel */
+        $viewModel = $e->getViewModel();
+
+        /** @var ServiceLocatorInterface $serviceManager */
+        $serviceManager = $e->getApplication()
+            ->getServiceManager();
+
+        if ($e->getTarget() instanceof ActionControllerInterface) {
+            $viewModel->setTemplate(
+                $serviceManager->get(Module::class)
+                    ->get('default_layout_authorized')
+            );
+        }
+
+        /** @var ModelInterface $child */
+        foreach ($viewModel->getChildren() as $child) {
+            $child->setVariable(
+                'form', $serviceManager->get('FormElementManager')->get(LoginForm::class)
+            );
+        }
     }
 }

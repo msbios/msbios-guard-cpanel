@@ -6,8 +6,7 @@
  */
 namespace MSBios\Guard\CPanel\Controller;
 
-use MSBios\CPanel\Mvc\Controller\LazyAbstractActionController;
-
+use MSBios\CPanel\Mvc\Controller\AbstractLazyActionController;
 use MSBios\Guard\Resource\Entity\User;
 use Zend\Crypt\Password\Bcrypt;
 use Zend\EventManager\EventInterface;
@@ -17,15 +16,15 @@ use Zend\Mvc\MvcEvent;
  * Class UserController
  * @package MSBios\Guard\CPanel\Controller
  */
-class UserController extends LazyAbstractActionController
+class UserController extends AbstractLazyActionController
 {
     /**
      * @param MvcEvent $e
      */
     public function onDispatch(MvcEvent $e)
     {
-        $this->getEventManager()->attach(self::PERSIST_OBJECT, [$this, 'onPersistObject']);
-        $this->getEventManager()->attach(self::MERGE_OBJECT, [$this, 'onMergeObject']);
+        $this->getEventManager()->attach(self::EVENT_PERSIST_OBJECT, [$this, 'onPersistObject']);
+        $this->getEventManager()->attach(self::EVENT_MERGE_OBJECT, [$this, 'onMergeObject']);
         parent::onDispatch($e);
     }
 

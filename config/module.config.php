@@ -75,8 +75,8 @@ return [
 
         'factories' => [
             Controller\AuthenticationController::class => Factory\AuthenticationControllerFactory::class,
-            Controller\ResourceController::class => \MSBios\CPanel\Factory\LazyAbstractControllerFactory::class,
-            Controller\UserController::class => \MSBios\CPanel\Factory\LazyAbstractControllerFactory::class,
+            Controller\ResourceController::class => \MSBios\CPanel\Factory\LazyActionControllerFactory::class,
+            Controller\UserController::class => \MSBios\CPanel\Factory\LazyActionControllerFactory::class,
         ]
     ],
 
@@ -234,19 +234,14 @@ return [
 
         'resource_providers' => [
             \MSBios\Guard\Provider\ResourceProvider::class => [
-                'RESOURCE',
-                'USER',
+                Controller\UserController::class => []
             ]
         ],
 
         'rule_providers' => [
             \MSBios\Guard\Provider\RuleProvider::class => [
-                'allow' => [
-                    ['DEVELOPER', 'RESOURCE'],
-                    ['DEVELOPER', 'USER']
-                ],
-                'deny' => [
-                ]
+                'allow' => [],
+                'deny' => []
             ]
         ],
     ],
@@ -257,11 +252,11 @@ return [
 
         // Module listeners
         'listeners' => [
-            [
+            Listener\ForbiddenListener::class => [
                 'listener' => Listener\ForbiddenListener::class,
                 'method' => 'onDispatchError',
                 'event' => \Zend\Mvc\MvcEvent::EVENT_DISPATCH_ERROR,
-                'priority' => -110,
+                'priority' => -100900,
             ],
         ]
     ],

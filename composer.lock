@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "928025bf8b822a3be585daa23b111c5a",
+    "content-hash": "047b1da635e682cc0109b25f62aaf60a",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -1735,16 +1735,16 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "v2.5.9",
+            "version": "v2.5.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "4f96fc62cef60093573acea955ed5e07643401d8"
+                "reference": "c78afd51721804f4f76ff30d9b6f6159eb046161"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/4f96fc62cef60093573acea955ed5e07643401d8",
-                "reference": "4f96fc62cef60093573acea955ed5e07643401d8",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/c78afd51721804f4f76ff30d9b6f6159eb046161",
+                "reference": "c78afd51721804f4f76ff30d9b6f6159eb046161",
                 "shasum": ""
             },
             "require": {
@@ -1807,7 +1807,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2017-08-16T13:30:32+00:00"
+            "time": "2017-08-18T19:17:35+00:00"
         },
         {
             "name": "jhuet/zdt-logger-module",
@@ -1937,25 +1937,22 @@
         },
         {
             "name": "msbios/application",
-            "version": "v0.1.4",
+            "version": "v0.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-application.git",
-                "reference": "b6aa1bdb1ed06fd043a73e042939219fec3464b7"
+                "reference": "28593f58ccdac3b9b0c8189b4d33ba449928df27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-application/zipball/b6aa1bdb1ed06fd043a73e042939219fec3464b7",
-                "reference": "b6aa1bdb1ed06fd043a73e042939219fec3464b7",
+                "url": "https://api.github.com/repos/msbios/msbios-application/zipball/28593f58ccdac3b9b0c8189b4d33ba449928df27",
+                "reference": "28593f58ccdac3b9b0c8189b4d33ba449928df27",
                 "shasum": ""
             },
             "require": {
-                "digitalnature/php-ref": "^1.2",
-                "msbios/i18n": "^0.1.0",
                 "msbios/msbios": "^0.0.1",
                 "msbios/navigation": "^0.1",
-                "msbios/theme": "^0.0.18",
-                "msbios/widget": "^0.0.1",
+                "msbios/theme": "^0.0.21",
                 "patchwork/utf8": "^1.3",
                 "zendframework/zend-loader": "^2.5",
                 "zendframework/zend-modulemanager": "^2.8",
@@ -1987,32 +1984,31 @@
             "keywords": [
                 "php"
             ],
-            "time": "2017-08-13T13:59:22+00:00"
+            "time": "2017-08-21T16:32:02+00:00"
         },
         {
             "name": "msbios/assetic",
-            "version": "v0.0.2",
+            "version": "v0.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-assetic.git",
-                "reference": "4575f1ff36b3a3ecce82a68470ff6ae9c65dd21a"
+                "reference": "73a34686f056c4a7a58ccf0459aad368dbdb800f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-assetic/zipball/4575f1ff36b3a3ecce82a68470ff6ae9c65dd21a",
-                "reference": "4575f1ff36b3a3ecce82a68470ff6ae9c65dd21a",
+                "url": "https://api.github.com/repos/msbios/msbios-assetic/zipball/73a34686f056c4a7a58ccf0459aad368dbdb800f",
+                "reference": "73a34686f056c4a7a58ccf0459aad368dbdb800f",
                 "shasum": ""
             },
             "require": {
                 "kriswallsmith/assetic": "^1.4",
-                "msbios/msbios": "^0.0.1",
-                "zendframework/zend-loader": "^2.5",
-                "zendframework/zend-modulemanager": "^2.8",
-                "zendframework/zend-servicemanager": "^3.3"
+                "msbios/msbios": "^0.0.1"
             },
             "require-dev": {
+                "msbios/debug": "^0.0.3",
                 "phpunit/phpunit": "^5.7",
                 "squizlabs/php_codesniffer": "^3.0",
+                "zendframework/zend-mvc": "^3.1",
                 "zendframework/zend-test": "^3.1"
             },
             "type": "library",
@@ -2036,7 +2032,7 @@
             "keywords": [
                 "php"
             ],
-            "time": "2017-08-18T13:08:41+00:00"
+            "time": "2017-08-21T15:13:49+00:00"
         },
         {
             "name": "msbios/authentication",
@@ -2091,28 +2087,27 @@
         },
         {
             "name": "msbios/cpanel",
-            "version": "v0.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/msbios/msbios-cpanel.git",
-                "reference": "bdd7af4a8101637f87c3a4b300121b39c5e5f206"
-            },
+            "version": "dev-master",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-cpanel/zipball/bdd7af4a8101637f87c3a4b300121b39c5e5f206",
-                "reference": "bdd7af4a8101637f87c3a4b300121b39c5e5f206",
-                "shasum": ""
+                "type": "path",
+                "url": "../msbios-cpanel",
+                "reference": "3ea59596d408debc144215ad8505df05b56a076d",
+                "shasum": null
             },
             "require": {
                 "msbios/msbios": "^0.0.1",
                 "zendframework/zend-loader": "^2.5",
                 "zendframework/zend-modulemanager": "^2.8",
+                "zendframework/zend-mvc-plugin-flashmessenger": "^1.0",
                 "zendframework/zend-servicemanager": "^3.3"
             },
             "require-dev": {
-                "msbios/guard": "^0.0.9",
+                "msbios/application": "^0.1.5",
+                "msbios/authentication": "^0.0.3",
+                "msbios/debug": "^0.0.3",
+                "msbios/guard": "^0.0.16",
+                "msbios/guard-cpanel": "^0.0.2",
                 "msbios/resource": "^0.0.1",
-                "msbios/theme": "^0.0.16",
                 "phpunit/phpunit": "^5.7",
                 "squizlabs/php_codesniffer": "^3.0",
                 "zendframework/zend-test": "^3.1"
@@ -2123,7 +2118,32 @@
                     "MSBios\\CPanel\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "MSBiosTest\\CPanel\\": "tests/"
+                }
+            },
+            "scripts": {
+                "cs-check": [
+                    "phpcs"
+                ],
+                "cs-fix": [
+                    "phpcbf"
+                ],
+                "test": [
+                    "@cs-check",
+                    "phpunit"
+                ],
+                "assets": [
+                    "cd bin && ln -s ../themes/limitless/public/ limitless"
+                ],
+                "serve": [
+                    "php -S 0.0.0.0:3107 -t bin bin/msbios-cpanel-module.php"
+                ],
+                "commit": [
+                    "git add . && git commit -a -m \"Lazy Composer Commiter\" && git push"
+                ]
+            },
             "license": [
                 "GPL"
             ],
@@ -2137,8 +2157,7 @@
             "homepage": "https://github.com/msbios/msbios-cpanel",
             "keywords": [
                 "php"
-            ],
-            "time": "2017-08-10T15:18:36+00:00"
+            ]
         },
         {
             "name": "msbios/debug",
@@ -2193,16 +2212,16 @@
         },
         {
             "name": "msbios/guard",
-            "version": "v0.0.12",
+            "version": "v0.0.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-guard.git",
-                "reference": "afc0aa4fbf51001ba0152d915089c6f2bc37a65e"
+                "reference": "4c82d63b59dda100affc965628f716ada6e374e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-guard/zipball/afc0aa4fbf51001ba0152d915089c6f2bc37a65e",
-                "reference": "afc0aa4fbf51001ba0152d915089c6f2bc37a65e",
+                "url": "https://api.github.com/repos/msbios/msbios-guard/zipball/4c82d63b59dda100affc965628f716ada6e374e1",
+                "reference": "4c82d63b59dda100affc965628f716ada6e374e1",
                 "shasum": ""
             },
             "require": {
@@ -2213,9 +2232,7 @@
                 "zendframework/zend-servicemanager": "^3.3"
             },
             "require-dev": {
-                "kriswallsmith/assetic": "^1.4",
-                "msbios/application": "^0.1.4",
-                "msbios/assetic": "^0.0.1",
+                "msbios/application": "^0.1.5",
                 "msbios/debug": "^0.0.3",
                 "phpunit/phpunit": "^5.7",
                 "squizlabs/php_codesniffer": "^3.0",
@@ -2242,7 +2259,7 @@
             "keywords": [
                 "php"
             ],
-            "time": "2017-08-18T13:05:52+00:00"
+            "time": "2017-08-21T17:31:14+00:00"
         },
         {
             "name": "msbios/guard-resource",
@@ -2491,29 +2508,30 @@
         },
         {
             "name": "msbios/theme",
-            "version": "v0.0.18",
+            "version": "v0.0.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-theme.git",
-                "reference": "9bc47a9efd7fa96be3117045dba032bef0a31f4f"
+                "reference": "f3c32851e72adce5f11100a35a7f2affae758fb1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-theme/zipball/9bc47a9efd7fa96be3117045dba032bef0a31f4f",
-                "reference": "9bc47a9efd7fa96be3117045dba032bef0a31f4f",
+                "url": "https://api.github.com/repos/msbios/msbios-theme/zipball/f3c32851e72adce5f11100a35a7f2affae758fb1",
+                "reference": "f3c32851e72adce5f11100a35a7f2affae758fb1",
                 "shasum": ""
             },
             "require": {
+                "msbios/assetic": "^0.0.3",
+                "msbios/i18n": "^0.1",
                 "msbios/msbios": "^0.0.1",
                 "msbios/stdlib": "^0.0.1",
+                "msbios/widget": "^0.0.1",
                 "zendframework/zend-loader": "^2.5",
                 "zendframework/zend-modulemanager": "^2.8",
                 "zendframework/zend-servicemanager": "^3.3"
             },
             "require-dev": {
-                "msbios/assetic": "^0.0.1",
-                "msbios/i18n": "^0.0.2",
-                "msbios/widget": "^0.0.1",
+                "msbios/debug": "^0.0.3",
                 "phpunit/phpunit": "^5.7",
                 "squizlabs/php_codesniffer": "^3.0",
                 "zendframework/zend-test": "^3.1"
@@ -2534,12 +2552,12 @@
                     "email": "info@msbios.com"
                 }
             ],
-            "description": "Zend Theme",
+            "description": "MSBios Theme",
             "homepage": "https://github.com/msbios/msbios-theme",
             "keywords": [
                 "php"
             ],
-            "time": "2017-08-11T08:21:43+00:00"
+            "time": "2017-08-21T16:19:45+00:00"
         },
         {
             "name": "msbios/widget",
@@ -5543,7 +5561,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "msbios/cpanel": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
