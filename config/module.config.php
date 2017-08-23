@@ -238,18 +238,21 @@ return [
     \MSBios\CPanel\Module::class => [
         'controllers' => [ // key controller
             Controller\ResourceController::class => [
+                'resource' => Controller\ResourceController::class,
                 'route_name' => 'cpanel/resource',
                 'resource_class' => \MSBios\Guard\Resource\Entity\Resource::class,
                 'form_element' => \MSBios\Guard\Resource\Form\UserForm::class,
                 'item_count_per_page' => 10 // optional
             ],
             Controller\RoleController::class => [
+                'resource' => Controller\RoleController::class,
                 'route_name' => 'cpanel/role',
                 'resource_class' => \MSBios\Guard\Resource\Entity\User::class,
                 'form_element' => \MSBios\Guard\Resource\Form\UserForm::class,
                 'item_count_per_page' => 10 // optional
             ],
             Controller\UserController::class => [
+                'resource' => Controller\UserController::class,
                 'route_name' => 'cpanel/user',
                 'resource_class' => \MSBios\Guard\Resource\Entity\User::class,
                 'form_element' => \MSBios\Guard\Resource\Form\UserForm::class,

@@ -21,7 +21,7 @@ $this->headScript()
                 <h4><?= $this->translate('Information message'); ?></h4>
                 <p><?= $this->translate('The database is not created at the moment no user, click "Create new user" to start working with the user.'); ?></p>
                 <p>
-                    <?php if ($this->isAllowed(Controller\UserController::class, 'add')): ?>
+                    <?php if ($this->isAllowed($this->config->get('resource'), 'add')): ?>
                         <a href="<?= $this->url($this->config->get('route_name'), ['action' => 'add']); ?>"
                            class="btn btn-info"><?= $this->translate('Create new user'); ?></a>
                     <?php endif; ?>
@@ -58,7 +58,7 @@ $this->headScript()
 
                             &nbsp;
 
-                            <?php if ($this->isAllowed(Controller\UserController::class, 'add')): ?>
+                            <?php if ($this->isAllowed($this->config->get('resource'), 'add')): ?>
                                 <a href="<?= $this->url($this->config->get('route_name'), ['action' => 'add']); ?>"
                                    class="btn btn-success"><?= $this->translate('Create new user'); ?></a>
                             <?php endif; ?>
@@ -94,7 +94,7 @@ $this->headScript()
 
                                     <ul class="icons-list">
 
-                                        <?php if ($this->isAllowed(Controller\UserController::class, 'edit')): ?>
+                                        <?php if ($this->isAllowed($this->config->get('resource'), 'edit')): ?>
                                             <li>
                                                 <a href="<?= $this->url($this->config->get('route_name'), ['action' => 'edit', 'id' => $item->getId()]); ?>">
                                                     <i class="icon-pencil"></i>
@@ -102,7 +102,7 @@ $this->headScript()
                                             </li>
                                         <?php endif; ?>
 
-                                        <?php if ($this->isAllowed(Controller\UserController::class, 'drop')): ?>
+                                        <?php if ($this->isAllowed($this->config->get('resource'), 'drop')): ?>
 
                                             <li class="text-danger-600">
                                                 <a href="#"
