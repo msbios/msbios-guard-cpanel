@@ -49,7 +49,8 @@ class ForbiddenListener
         /** @var ModelInterface $child */
         foreach ($viewModel->getChildren() as $child) {
             $child->setVariable(
-                'form', $serviceManager->get('FormElementManager')->get(LoginForm::class)
+                'form',
+                $serviceManager->get('FormElementManager')->get(LoginForm::class)
             );
         }
     }

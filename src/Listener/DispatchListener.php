@@ -19,6 +19,5 @@ class DispatchListener
      */
     public function onDispatch(EventInterface $e)
     {
-
     }
 }
