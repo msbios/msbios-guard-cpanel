@@ -10,16 +10,6 @@ use Zend\Router\Http\Segment;
 
 return [
 
-    //'doctrine' => [
-    //    'authentication' => [
-    //        'orm_default' => [
-    //            'identity_class' => \MSBios\Guard\Resource\Entity\User::class,
-    //            'identity_property' => 'username',
-    //            'credential_property' => 'password'
-    //        ],
-    //    ],
-    //],
-
     'router' => [
         'routes' => [
             'cpanel' => [

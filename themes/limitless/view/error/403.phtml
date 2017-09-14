@@ -54,12 +54,14 @@ $form->setAttribute(
     </div>
 
     <div class="form-group">
-        <button type="submit" class="btn btn-primary btn-block">Sign in <i
-                    class="icon-circle-right2 position-right"></i></button>
+        <?= $this->formElement($form->get('redirect')); ?>
+        <button type="submit" class="btn btn-primary btn-block">
+            <?= $this->translate('Sign in'); ?> <i class="icon-circle-right2 position-right"></i>
+        </button>
     </div>
 
     <div class="text-center">
-        <a href="login_password_recover.html">Forgot password?</a>
+        <a href="#">Forgot password?</a>
     </div>
 </div>
 <?= $this->form()->closeTag($form); ?>

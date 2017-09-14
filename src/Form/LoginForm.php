@@ -5,6 +5,7 @@
  */
 namespace MSBios\Guard\CPanel\Form;
 
+use Zend\Form\Element\Hidden;
 use Zend\Form\Element\Password;
 use Zend\Form\Element\Text;
 use Zend\Form\Form;
@@ -32,6 +33,11 @@ class LoginForm extends Form
         $this->add([
             'type' => Password::class,
             'name' => 'password'
+        ]);
+
+        $this->add([
+            'type' => Hidden::class,
+            'name' => 'redirect'
         ]);
     }
 }

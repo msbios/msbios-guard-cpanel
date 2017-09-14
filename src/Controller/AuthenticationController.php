@@ -14,6 +14,7 @@ use MSBios\Guard\CPanel\Module;
 use Zend\Authentication\AuthenticationService;
 use Zend\Authentication\Result;
 use Zend\Mvc\Controller\AbstractActionController;
+use Zend\Mvc\Controller\Plugin\Redirect;
 use Zend\ServiceManager\ServiceLocatorInterface;
 use Zend\View\Model\ViewModel;
 
@@ -63,11 +64,21 @@ class AuthenticationController extends AbstractActionController implements Actio
             $authenticationResult = $this->authenticationService->authenticate();
 
             if ($authenticationResult->isValid()) {
-                return $this->redirect()->toRoute('cpanel');
+
+                /** @var Redirect $redirect */
+                $redirect = $this->redirect();
+
+                if (!empty($params['redirect'])) {
+                    return $redirect->toUrl(
+                        base64_decode($params['redirect'])
+                    );
+                }
+
+                return $redirect->toRoute('cpanel');
+
             } else {
                 $viewModel->setVariable(
-                    'messages',
-                    $authenticationResult->getMessages()
+                    'messages', $authenticationResult->getMessages()
                 );
             }
         }
@@ -78,8 +89,7 @@ class AuthenticationController extends AbstractActionController implements Actio
         );
 
         $viewModel->setVariable(
-            'form',
-            $this->serviceManager
+            'form', $this->serviceManager
                 ->get('FormElementManager')
                 ->get(LoginForm::class)
         );

@@ -10,7 +10,9 @@ use MSBios\CPanel\Mvc\Controller\ActionControllerInterface;
 use MSBios\Guard\CPanel\Form\LoginForm;
 use MSBios\Guard\CPanel\Module;
 use Zend\EventManager\EventInterface;
+use Zend\Form\FormInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
+use Zend\Stdlib\RequestInterface;
 use Zend\View\Model\ModelInterface;
 
 /**
@@ -24,7 +26,6 @@ class ForbiddenListener
      */
     public function onDispatchError(EventInterface $e)
     {
-
         /** @var string $error */
         $error = $e->getError();
 
@@ -46,12 +47,20 @@ class ForbiddenListener
             );
         }
 
+        /** @var FormInterface $form */
+        $form = $serviceManager->get('FormElementManager')->get(LoginForm::class);
+
+        /** @var RequestInterface $request */
+        $request = $e->getRequest();
+
+        $form->setData([
+            'redirect' => (!$request->isPost()) ?
+                base64_encode($request->getRequestUri()) : $request->fromPost('redirect')
+        ]);
+
         /** @var ModelInterface $child */
         foreach ($viewModel->getChildren() as $child) {
-            $child->setVariable(
-                'form',
-                $serviceManager->get('FormElementManager')->get(LoginForm::class)
-            );
+            $child->setVariable('form', $form);
         }
     }
 }
