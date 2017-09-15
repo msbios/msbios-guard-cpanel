@@ -49,7 +49,9 @@ class AuthenticationProvider extends DefaultAuthenticationProvider
                 $roles[] = $role->getCode();
             }
 
-            $roles[] = $this->getAuthenticatedRole();
+            if (empty($roles)) {
+                $roles[] = $this->getAuthenticatedRole();
+            }
 
             return $roles;
         }
