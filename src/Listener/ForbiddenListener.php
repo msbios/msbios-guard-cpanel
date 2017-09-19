@@ -53,10 +53,11 @@ class ForbiddenListener
         /** @var RequestInterface $request */
         $request = $e->getRequest();
 
-        $form->setData([
-            'redirect' => (!$request->isPost()) ?
-                base64_encode($request->getRequestUri()) : $request->fromPost('redirect')
-        ]);
+        // TODO: Need doing redirect to lock page
+        //$form->setData([
+        //    'redirect' => (!$request->isPost()) ?
+        //        base64_encode($request->getRequestUri()) : $request->fromPost('redirect')
+        //]);
 
         /** @var ModelInterface $child */
         foreach ($viewModel->getChildren() as $child) {
