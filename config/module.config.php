@@ -53,6 +53,19 @@ return [
                             ]
                         ]
                     ],
+                    'rule' => [
+                        'type' => Segment::class,
+                        'options' => [
+                            'route' => 'rule[/[:action[/[:id[/]]]]]',
+                            'defaults' => [
+                                'controller' => Controller\RuleController::class,
+                            ],
+                            'constraints' => [
+                                'action' => 'add|edit|drop',
+                                'id' => '[0-9]+'
+                            ]
+                        ]
+                    ],
                     'user' => [
                         'type' => Segment::class,
                         'options' => [
