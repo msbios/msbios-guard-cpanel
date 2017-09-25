@@ -302,6 +302,7 @@ return [
                     [['GUEST'], Controller\AuthenticationController::class],
                     [['DEVELOPER'], Controller\ResourceController::class],
                     [['DEVELOPER'], Controller\RoleController::class],
+                    [['DEVELOPER'], Controller\RuleController::class],
                     [['DEVELOPER'], Controller\UserController::class]
                 ],
                 'deny' => []
