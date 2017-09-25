@@ -7,7 +7,6 @@
 
 namespace MSBios\Guard\CPanel\Controller;
 
-use DoctrineModule\Authentication\Adapter\ObjectRepository;
 use MSBios\CPanel\Mvc\Controller\ActionControllerInterface;
 use MSBios\Guard\CPanel\Form\LoginForm;
 use MSBios\Guard\CPanel\Module;
@@ -46,12 +45,12 @@ class AuthenticationController extends AbstractActionController implements Actio
      */
     public function loginAction()
     {
-
         /** @var ViewModel $viewModel */
         $viewModel = new ViewModel;
 
         if ($this->getRequest()->isPost()) {
-            /** @var ObjectRepository $adapter */
+
+            /** @var  $adapter */
             $adapter = $this->authenticationService->getAdapter();
 
             /** @var array $params */
@@ -108,11 +107,10 @@ class AuthenticationController extends AbstractActionController implements Actio
      */
     public function logoutAction()
     {
-        $this->authenticationService
-            ->clearIdentity();
-
-        return $this->redirect()
-            ->toRoute('cpanel');
+        $this->authenticationService->clearIdentity();
+        return $this->redirect()->toRoute(
+            'cpanel'
+        );
     }
 
     /**

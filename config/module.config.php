@@ -267,6 +267,7 @@ return [
                 Controller\AuthenticationController::class => [],
                 Controller\ResourceController::class => [],
                 Controller\RoleController::class => [],
+                Controller\RuleController::class => [],
                 Controller\UserController::class => []
             ]
         ],
