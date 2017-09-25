@@ -157,7 +157,18 @@ return [
                     ],
                     'rule' => [
                         'label' => _('Rules'),
-                        'uri' => '#'
+                        'route' => 'cpanel/rule',
+                        'pages' => [
+                            [
+                                'label' => _('Create new rule'),
+                                'route' => 'cpanel/rule',
+                                'action' => 'add'
+                            ], [
+                                'label' => _('Edit rule'),
+                                'route' => 'cpanel/rule',
+                                'action' => 'edit'
+                            ],
+                        ]
                     ],
                 ],
             ],
