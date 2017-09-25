@@ -7,6 +7,7 @@
 namespace MSBios\Guard\CPanel;
 
 use Zend\Router\Http\Segment;
+use Zend\ServiceManager\Factory\InvokableFactory;
 
 return [
 
@@ -167,7 +168,8 @@ return [
 
     'form_elements' => [
         'factories' => [
-            Form\LoginForm::class => Factory\LoginFormFactory::class,
+            Form\LoginForm::class =>
+                InvokableFactory::class,
         ]
     ],
 
