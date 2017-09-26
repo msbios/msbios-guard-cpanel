@@ -97,6 +97,8 @@ return [
                 \MSBios\CPanel\Factory\LazyActionControllerFactory::class,
             Controller\RoleController::class =>
                 \MSBios\CPanel\Factory\LazyActionControllerFactory::class,
+            Controller\RuleController::class =>
+                \MSBios\CPanel\Factory\LazyActionControllerFactory::class,
             Controller\UserController::class =>
                 \MSBios\CPanel\Factory\LazyActionControllerFactory::class,
         ]
