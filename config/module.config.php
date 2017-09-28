@@ -43,7 +43,7 @@ return [
                     'resource-permission' => [
                         'type' => Segment::class,
                         'options' => [
-                            'route' => 'resource-permission/:resource_id/[:action[/[:id[/]]]]',
+                            'route' => 'resource-permission/:resource_id[/[:action[/[:id[/]]]]]',
                             'defaults' => [
                                 'controller' => Controller\Resource\PermissionController::class,
                             ],
