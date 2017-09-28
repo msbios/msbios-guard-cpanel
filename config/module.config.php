@@ -40,6 +40,19 @@ return [
                             ]
                         ]
                     ],
+                    'resource-permission' => [
+                        'type' => Segment::class,
+                        'options' => [
+                            'route' => 'resource-permission[/[:action[/[:id[/]]]]]',
+                            'defaults' => [
+                                'controller' => Controller\Resource\PermissionController::class,
+                            ],
+                            'constraints' => [
+                                'action' => 'add|edit|drop',
+                                'id' => '[0-9]+'
+                            ]
+                        ]
+                    ],
                     'role' => [
                         'type' => Segment::class,
                         'options' => [
@@ -95,6 +108,8 @@ return [
                 Factory\AuthenticationControllerFactory::class,
             Controller\ResourceController::class =>
                 \MSBios\CPanel\Factory\LazyActionControllerFactory::class,
+            Controller\Resource\PermissionController::class =>
+                \MSBios\CPanel\Factory\LazyActionControllerFactory::class,
             Controller\RoleController::class =>
                 \MSBios\CPanel\Factory\LazyActionControllerFactory::class,
             Controller\RuleController::class =>
@@ -139,6 +154,20 @@ return [
                                 'label' => _('Edit user resource'),
                                 'route' => 'cpanel/resource',
                                 'action' => 'edit'
+                            ], [
+                                'label' => _('Permissions'),
+                                'route' => 'cpanel/resource-permission',
+                                'pages' => [
+                                    [
+                                        'label' => _('Create resource permission'),
+                                        'route' => 'cpanel/resource-permission',
+                                        'action' => 'add'
+                                    ], [
+                                        'label' => _('Edit resource permission'),
+                                        'route' => 'cpanel/resource-permission',
+                                        'action' => 'edit'
+                                    ],
+                                ]
                             ],
                         ]
                     ],
@@ -292,6 +321,7 @@ return [
             \MSBios\Guard\Provider\ResourceProvider::class => [
                 Controller\AuthenticationController::class => [],
                 Controller\ResourceController::class => [],
+                Controller\Resource\PermissionController::class => [], // TODO: Возможно нужно правильно построить родителя
                 Controller\RoleController::class => [],
                 Controller\RuleController::class => [],
                 Controller\UserController::class => []
@@ -303,6 +333,7 @@ return [
                 'allow' => [
                     [['GUEST'], Controller\AuthenticationController::class],
                     [['DEVELOPER'], Controller\ResourceController::class],
+                    [['DEVELOPER'], Controller\Resource\PermissionController::class],
                     [['DEVELOPER'], Controller\RoleController::class],
                     [['DEVELOPER'], Controller\RuleController::class],
                     [['DEVELOPER'], Controller\UserController::class]
