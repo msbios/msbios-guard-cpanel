@@ -155,7 +155,7 @@ return [
                                 'route' => 'cpanel/resource',
                                 'action' => 'edit'
                             ], [
-                                'label' => _('Permissions'),
+                                'label' => _('Resource Permissions'),
                                 'route' => 'cpanel/resource-permission',
                                 'pages' => [
                                     [
