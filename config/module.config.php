@@ -43,12 +43,13 @@ return [
                     'resource-permission' => [
                         'type' => Segment::class,
                         'options' => [
-                            'route' => 'resource-permission[/[:action[/[:id[/]]]]]',
+                            'route' => 'resource-permission/:resource_id/[:action[/[:id[/]]]]',
                             'defaults' => [
                                 'controller' => Controller\Resource\PermissionController::class,
                             ],
                             'constraints' => [
                                 'action' => 'add|edit|drop',
+                                'resource_id' => '[0-9]+',
                                 'id' => '[0-9]+'
                             ]
                         ]
