@@ -67,17 +67,17 @@ class AuthenticationController extends AbstractActionController implements Actio
                 /** @var Redirect $redirect */
                 $redirect = $this->redirect();
 
-                if (!empty($params['redirect'])) {
+                if (! empty($params['redirect'])) {
                     return $redirect->toUrl(
                         base64_decode($params['redirect'])
                     );
                 }
 
                 return $redirect->toRoute('cpanel');
-
             } else {
                 $viewModel->setVariable(
-                    'messages', $authenticationResult->getMessages()
+                    'messages',
+                    $authenticationResult->getMessages()
                 );
             }
         }
@@ -88,7 +88,8 @@ class AuthenticationController extends AbstractActionController implements Actio
         );
 
         $viewModel->setVariable(
-            'form', $this->serviceManager
+            'form',
+            $this->serviceManager
                 ->get('FormElementManager')
                 ->get(LoginForm::class)
         );

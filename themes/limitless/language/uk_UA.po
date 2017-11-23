@@ -1,0 +1,193 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MSBios Guard CPanel\n"
+"POT-Creation-Date: 2017-11-23 14:34+0200\n"
+"PO-Revision-Date: 2017-11-23 14:35+0200\n"
+"Last-Translator: \n"
+"Language-Team: MSBios Team <info@msbios.com>\n"
+"Language: uk_UA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-Basepath: ../view\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: translate\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: error/403.phtml:22
+msgid "Close"
+msgstr ""
+
+#: error/403.phtml:24
+msgid "Danger!"
+msgstr ""
+
+#: error/403.phtml:32
+msgid "Login to your account"
+msgstr "Увійдіть до свого облікового запису"
+
+#: error/403.phtml:33
+msgid "Enter your credentials below"
+msgstr "Введіть свої облікові дані нижче"
+
+#: error/403.phtml:40 ms-bios/guard/c-panel/resource/form.phtml:46
+#: ms-bios/guard/c-panel/role/form.phtml:46
+#: ms-bios/guard/c-panel/user/form.phtml:46
+#: ms-bios/guard/c-panel/user/index.phtml:76
+msgid "Username"
+msgstr "Ім'я користувача"
+
+#: error/403.phtml:50 ms-bios/guard/c-panel/resource/form.phtml:65
+#: ms-bios/guard/c-panel/role/form.phtml:65
+#: ms-bios/guard/c-panel/user/form.phtml:65
+msgid "Password"
+msgstr "Пароль"
+
+#: error/403.phtml:60
+msgid "Sign in"
+msgstr "Увійти"
+
+#: error/403.phtml:65
+msgid "Forgot password?"
+msgstr "Забули пароль?"
+
+#: layout/login_simple.phtml:15
+msgid "MSBios CMS by Judzhin Miles"
+msgstr ""
+
+#: ms-bios/guard/c-panel/resource/form.phtml:26
+#: ms-bios/guard/c-panel/role/form.phtml:26
+#: ms-bios/guard/c-panel/user/form.phtml:26
+msgid "Enter user first name"
+msgstr ""
+
+#: ms-bios/guard/c-panel/resource/form.phtml:28
+#: ms-bios/guard/c-panel/role/form.phtml:28
+#: ms-bios/guard/c-panel/user/form.phtml:28
+#: ms-bios/guard/c-panel/user/index.phtml:74
+msgid "First Name"
+msgstr ""
+
+#: ms-bios/guard/c-panel/resource/form.phtml:35
+#: ms-bios/guard/c-panel/role/form.phtml:35
+#: ms-bios/guard/c-panel/user/form.phtml:35
+msgid "Enter user last name"
+msgstr ""
+
+#: ms-bios/guard/c-panel/resource/form.phtml:37
+#: ms-bios/guard/c-panel/role/form.phtml:37
+#: ms-bios/guard/c-panel/user/form.phtml:37
+#: ms-bios/guard/c-panel/user/index.phtml:75
+msgid "Last Name"
+msgstr ""
+
+#: ms-bios/guard/c-panel/resource/form.phtml:44
+#: ms-bios/guard/c-panel/role/form.phtml:44
+#: ms-bios/guard/c-panel/user/form.phtml:44
+msgid "Enter username"
+msgstr ""
+
+#: ms-bios/guard/c-panel/resource/form.phtml:53
+#: ms-bios/guard/c-panel/role/form.phtml:53
+#: ms-bios/guard/c-panel/user/form.phtml:53
+msgid "Enter user email"
+msgstr ""
+
+#: ms-bios/guard/c-panel/resource/form.phtml:56
+#: ms-bios/guard/c-panel/role/form.phtml:56
+#: ms-bios/guard/c-panel/user/form.phtml:56
+msgid "Email"
+msgstr ""
+
+#: ms-bios/guard/c-panel/resource/form.phtml:62
+#: ms-bios/guard/c-panel/role/form.phtml:62
+#: ms-bios/guard/c-panel/user/form.phtml:62
+msgid "Enter user password"
+msgstr ""
+
+#: ms-bios/guard/c-panel/resource/form.phtml:71
+#: ms-bios/guard/c-panel/role/form.phtml:71
+#: ms-bios/guard/c-panel/user/form.phtml:71
+msgid "Confirm user password"
+msgstr ""
+
+#: ms-bios/guard/c-panel/resource/form.phtml:74
+#: ms-bios/guard/c-panel/role/form.phtml:74
+#: ms-bios/guard/c-panel/user/form.phtml:74
+msgid "Confirm"
+msgstr ""
+
+#: ms-bios/guard/c-panel/resource/form.phtml:78
+#: ms-bios/guard/c-panel/role/form.phtml:78
+#: ms-bios/guard/c-panel/user/form.phtml:78
+msgid "Reset"
+msgstr "Скинути"
+
+#: ms-bios/guard/c-panel/resource/form.phtml:80
+#: ms-bios/guard/c-panel/role/form.phtml:80
+#: ms-bios/guard/c-panel/user/form.phtml:80
+msgid "Submit"
+msgstr "Відправити"
+
+#: ms-bios/guard/c-panel/resource/index.phtml:21
+#: ms-bios/guard/c-panel/role/index.phtml:21
+#: ms-bios/guard/c-panel/user/index.phtml:21
+msgid "Information message"
+msgstr ""
+
+#: ms-bios/guard/c-panel/resource/index.phtml:22
+msgid ""
+"The database is not created at the moment no resource, click \"Create new "
+"resource\" to start working with the resource."
+msgstr ""
+
+#: ms-bios/guard/c-panel/resource/index.phtml:26
+msgid "Create new resource"
+msgstr ""
+
+#: ms-bios/guard/c-panel/resource/index.phtml:63
+#: ms-bios/guard/c-panel/user/index.phtml:26
+#: ms-bios/guard/c-panel/user/index.phtml:63
+msgid "Create new user"
+msgstr ""
+
+#: ms-bios/guard/c-panel/resource/index.phtml:74
+#: ms-bios/guard/c-panel/role/index.phtml:74
+msgid "Parent"
+msgstr ""
+
+#: ms-bios/guard/c-panel/resource/index.phtml:75
+#: ms-bios/guard/c-panel/role/index.phtml:75
+msgid "Code"
+msgstr ""
+
+#: ms-bios/guard/c-panel/resource/index.phtml:76
+#: ms-bios/guard/c-panel/role/index.phtml:76
+msgid "Name"
+msgstr ""
+
+#: ms-bios/guard/c-panel/resource/index.phtml:78
+#: ms-bios/guard/c-panel/role/index.phtml:78
+#: ms-bios/guard/c-panel/user/index.phtml:78
+msgid "Actions"
+msgstr ""
+
+#: ms-bios/guard/c-panel/role/index.phtml:22
+msgid ""
+"The database is not created at the moment no role, click \"Create new role\" "
+"to start working with the resource."
+msgstr ""
+
+#: ms-bios/guard/c-panel/role/index.phtml:26
+#: ms-bios/guard/c-panel/role/index.phtml:63
+msgid "Create new role"
+msgstr ""
+
+#: ms-bios/guard/c-panel/user/index.phtml:22
+msgid ""
+"The database is not created at the moment no user, click \"Create new user\" "
+"to start working with the user."
+msgstr ""

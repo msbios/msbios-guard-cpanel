@@ -1,0 +1,318 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MSBios CMS by Judzhin Miles\n"
+"POT-Creation-Date: 2017-11-23 14:35+0200\n"
+"PO-Revision-Date: 2017-11-23 14:44+0200\n"
+"Last-Translator: \n"
+"Language-Team: MSBios Team <info@msbios.com>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-Basepath: ../../..\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _;translate;addSuccessMessage\n"
+"X-Poedit-SearchPath-0: themes/limitless/view\n"
+"X-Poedit-SearchPath-1: src\n"
+"X-Poedit-SearchPath-2: config\n"
+
+#: config/module.config.php:126
+msgid "Access Control List"
+msgstr "Список контроля доступа"
+
+#: config/module.config.php:132
+msgid "Users"
+msgstr "Пользователи"
+
+#: config/module.config.php:136
+#: themes/limitless/view/ms-bios/guard/c-panel/resource/index.phtml:63
+#: themes/limitless/view/ms-bios/guard/c-panel/user/index.phtml:26
+#: themes/limitless/view/ms-bios/guard/c-panel/user/index.phtml:63
+msgid "Create new user"
+msgstr "Создать нового пользователя"
+
+#: config/module.config.php:140
+msgid "Edit user record"
+msgstr "Изменить запись пользователя"
+
+#: config/module.config.php:147
+msgid "Resources"
+msgstr "Ресурсы"
+
+#: config/module.config.php:151
+#: themes/limitless/view/ms-bios/guard/c-panel/resource/index.phtml:26
+msgid "Create new resource"
+msgstr "Создать новый ресурс"
+
+#: config/module.config.php:155
+msgid "Edit user resource"
+msgstr "Редактировать пользовательский ресурс"
+
+#: config/module.config.php:159
+msgid "Resource Permissions"
+msgstr "Разрешения для ресурсов"
+
+#: config/module.config.php:163
+msgid "Create resource permission"
+msgstr "Создать разрешение ресурса"
+
+#: config/module.config.php:167
+msgid "Edit resource permission"
+msgstr "Редагувати дозволи на ресурси"
+
+#: config/module.config.php:176
+msgid "Roles"
+msgstr "Роли"
+
+#: config/module.config.php:180
+#: themes/limitless/view/ms-bios/guard/c-panel/role/index.phtml:26
+#: themes/limitless/view/ms-bios/guard/c-panel/role/index.phtml:63
+msgid "Create new role"
+msgstr "Создать новую роль"
+
+#: config/module.config.php:184
+msgid "Edit user role"
+msgstr "Изменить роль пользователя"
+
+#: config/module.config.php:191
+msgid "Rules"
+msgstr "Правила"
+
+#: config/module.config.php:195
+msgid "Create new rule"
+msgstr "Создать новое правило"
+
+#: config/module.config.php:199
+msgid "Edit rule"
+msgstr "Изменить правило"
+
+#: themes/limitless/view/error/403.phtml:22
+msgid "Close"
+msgstr "Закрыть"
+
+#: themes/limitless/view/error/403.phtml:24
+msgid "Danger!"
+msgstr "Опасность!"
+
+#: themes/limitless/view/error/403.phtml:32
+msgid "Login to your account"
+msgstr "Войдите в свой аккаунт"
+
+#: themes/limitless/view/error/403.phtml:33
+msgid "Enter your credentials below"
+msgstr "Введите свои учетные данные ниже"
+
+#: themes/limitless/view/error/403.phtml:40
+#: themes/limitless/view/ms-bios/guard/c-panel/resource/form.phtml:46
+#: themes/limitless/view/ms-bios/guard/c-panel/role/form.phtml:46
+#: themes/limitless/view/ms-bios/guard/c-panel/user/form.phtml:46
+#: themes/limitless/view/ms-bios/guard/c-panel/user/index.phtml:76
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: themes/limitless/view/error/403.phtml:50
+#: themes/limitless/view/ms-bios/guard/c-panel/resource/form.phtml:65
+#: themes/limitless/view/ms-bios/guard/c-panel/role/form.phtml:65
+#: themes/limitless/view/ms-bios/guard/c-panel/user/form.phtml:65
+msgid "Password"
+msgstr "Пароль"
+
+#: themes/limitless/view/error/403.phtml:60
+msgid "Sign in"
+msgstr "Войти в систему"
+
+#: themes/limitless/view/error/403.phtml:65
+msgid "Forgot password?"
+msgstr "Забыли пароль?"
+
+#: themes/limitless/view/layout/login_simple.phtml:15
+msgid "MSBios CMS by Judzhin Miles"
+msgstr ""
+
+#: themes/limitless/view/ms-bios/guard/c-panel/resource/form.phtml:26
+#: themes/limitless/view/ms-bios/guard/c-panel/role/form.phtml:26
+#: themes/limitless/view/ms-bios/guard/c-panel/user/form.phtml:26
+msgid "Enter user first name"
+msgstr "Введите имя пользователя"
+
+#: themes/limitless/view/ms-bios/guard/c-panel/resource/form.phtml:28
+#: themes/limitless/view/ms-bios/guard/c-panel/role/form.phtml:28
+#: themes/limitless/view/ms-bios/guard/c-panel/user/form.phtml:28
+#: themes/limitless/view/ms-bios/guard/c-panel/user/index.phtml:74
+msgid "First Name"
+msgstr "Имя"
+
+#: themes/limitless/view/ms-bios/guard/c-panel/resource/form.phtml:35
+#: themes/limitless/view/ms-bios/guard/c-panel/role/form.phtml:35
+#: themes/limitless/view/ms-bios/guard/c-panel/user/form.phtml:35
+msgid "Enter user last name"
+msgstr "Введите фамилию пользователя"
+
+#: themes/limitless/view/ms-bios/guard/c-panel/resource/form.phtml:37
+#: themes/limitless/view/ms-bios/guard/c-panel/role/form.phtml:37
+#: themes/limitless/view/ms-bios/guard/c-panel/user/form.phtml:37
+#: themes/limitless/view/ms-bios/guard/c-panel/user/index.phtml:75
+msgid "Last Name"
+msgstr "Фамилия"
+
+#: themes/limitless/view/ms-bios/guard/c-panel/resource/form.phtml:44
+#: themes/limitless/view/ms-bios/guard/c-panel/role/form.phtml:44
+#: themes/limitless/view/ms-bios/guard/c-panel/user/form.phtml:44
+msgid "Enter username"
+msgstr "Введите имя пользователя"
+
+#: themes/limitless/view/ms-bios/guard/c-panel/resource/form.phtml:53
+#: themes/limitless/view/ms-bios/guard/c-panel/role/form.phtml:53
+#: themes/limitless/view/ms-bios/guard/c-panel/user/form.phtml:53
+msgid "Enter user email"
+msgstr "Введите адрес электронной почты пользователя"
+
+#: themes/limitless/view/ms-bios/guard/c-panel/resource/form.phtml:56
+#: themes/limitless/view/ms-bios/guard/c-panel/role/form.phtml:56
+#: themes/limitless/view/ms-bios/guard/c-panel/user/form.phtml:56
+msgid "Email"
+msgstr ""
+
+#: themes/limitless/view/ms-bios/guard/c-panel/resource/form.phtml:62
+#: themes/limitless/view/ms-bios/guard/c-panel/role/form.phtml:62
+#: themes/limitless/view/ms-bios/guard/c-panel/user/form.phtml:62
+msgid "Enter user password"
+msgstr "Введите пароль пользователя"
+
+#: themes/limitless/view/ms-bios/guard/c-panel/resource/form.phtml:71
+#: themes/limitless/view/ms-bios/guard/c-panel/role/form.phtml:71
+#: themes/limitless/view/ms-bios/guard/c-panel/user/form.phtml:71
+msgid "Confirm user password"
+msgstr "Подтверждение пароля пользователя"
+
+#: themes/limitless/view/ms-bios/guard/c-panel/resource/form.phtml:74
+#: themes/limitless/view/ms-bios/guard/c-panel/role/form.phtml:74
+#: themes/limitless/view/ms-bios/guard/c-panel/user/form.phtml:74
+msgid "Confirm"
+msgstr "Подтвердить"
+
+#: themes/limitless/view/ms-bios/guard/c-panel/resource/form.phtml:78
+#: themes/limitless/view/ms-bios/guard/c-panel/role/form.phtml:78
+#: themes/limitless/view/ms-bios/guard/c-panel/user/form.phtml:78
+msgid "Reset"
+msgstr "Сброс"
+
+#: themes/limitless/view/ms-bios/guard/c-panel/resource/form.phtml:80
+#: themes/limitless/view/ms-bios/guard/c-panel/role/form.phtml:80
+#: themes/limitless/view/ms-bios/guard/c-panel/user/form.phtml:80
+msgid "Submit"
+msgstr "Отправить"
+
+#: themes/limitless/view/ms-bios/guard/c-panel/resource/index.phtml:21
+#: themes/limitless/view/ms-bios/guard/c-panel/role/index.phtml:21
+#: themes/limitless/view/ms-bios/guard/c-panel/user/index.phtml:21
+msgid "Information message"
+msgstr "Информационное сообщение"
+
+#: themes/limitless/view/ms-bios/guard/c-panel/resource/index.phtml:22
+msgid ""
+"The database is not created at the moment no resource, click \"Create new "
+"resource\" to start working with the resource."
+msgstr ""
+"База данных не создается в настоящий момент без ресурса, нажмите «Создать "
+"новый ресурс», чтобы начать работу с ресурсом."
+
+#: themes/limitless/view/ms-bios/guard/c-panel/resource/index.phtml:74
+#: themes/limitless/view/ms-bios/guard/c-panel/role/index.phtml:74
+msgid "Parent"
+msgstr "Родитель"
+
+#: themes/limitless/view/ms-bios/guard/c-panel/resource/index.phtml:75
+#: themes/limitless/view/ms-bios/guard/c-panel/role/index.phtml:75
+msgid "Code"
+msgstr "Код"
+
+#: themes/limitless/view/ms-bios/guard/c-panel/resource/index.phtml:76
+#: themes/limitless/view/ms-bios/guard/c-panel/role/index.phtml:76
+msgid "Name"
+msgstr "Имя"
+
+#: themes/limitless/view/ms-bios/guard/c-panel/resource/index.phtml:78
+#: themes/limitless/view/ms-bios/guard/c-panel/role/index.phtml:78
+#: themes/limitless/view/ms-bios/guard/c-panel/user/index.phtml:78
+msgid "Actions"
+msgstr "Действия"
+
+#: themes/limitless/view/ms-bios/guard/c-panel/role/index.phtml:22
+msgid ""
+"The database is not created at the moment no role, click \"Create new role\" "
+"to start working with the resource."
+msgstr ""
+"База данных не создается в настоящий момент без роли, нажмите «Создать новую "
+"роль», чтобы начать работу с ресурсом."
+
+#: themes/limitless/view/ms-bios/guard/c-panel/user/index.phtml:22
+msgid ""
+"The database is not created at the moment no user, click \"Create new user\" "
+"to start working with the user."
+msgstr ""
+"База данных не создается в настоящий момент без пользователя, нажмите "
+"«Создать нового пользователя», чтобы начать работать с пользователем."
+
+#~ msgid "Dashboard"
+#~ msgstr "Панель управления"
+
+#~ msgid "System"
+#~ msgstr "Система"
+
+#~ msgid "Layouts"
+#~ msgstr "Макеты"
+
+#~ msgid "Modules"
+#~ msgstr "Модули"
+
+#~ msgid "Page Types"
+#~ msgstr "Типы страниц"
+
+#~ msgid "Routes"
+#~ msgstr "Маршруты"
+
+#~ msgid "Setting"
+#~ msgstr "Настройки"
+
+#~ msgid "Themes"
+#~ msgstr "Темы"
+
+#~ msgid "Widgets"
+#~ msgstr "Виджеты"
+
+#~ msgid "Entities has been removed"
+#~ msgstr "Сущности были удалены"
+
+#~ msgid "Entity has been create"
+#~ msgstr "Сущность была создана"
+
+#~ msgid "Entity has been update"
+#~ msgstr "Сущность была обновлена"
+
+#~ msgid "Entity has been removed"
+#~ msgstr "Сущность была удалена"
+
+#~ msgid "Success!"
+#~ msgstr "Успешно"
+
+#~ msgid "Warning!"
+#~ msgstr "Предупреждение!"
+
+#~ msgid "Enter layout title"
+#~ msgstr "Введите название макета"
+
+#~ msgid "Title"
+#~ msgstr "Заглавие"
+
+#~ msgid "Enter layout identifier"
+#~ msgstr "Введите идентификатор макета"
+
+#~ msgid "Template"
+#~ msgstr "Шаблон"
+
+#~ msgid "File manager"
+#~ msgstr "Файловый менеджер"

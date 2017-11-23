@@ -19,7 +19,7 @@ $form->setAttribute(
         <div class="alert alert-danger no-border">
             <button type="button" class="close" data-dismiss="alert">
                 <span>&times;</span>
-                <span class="sr-only">Close</span>
+                <span class="sr-only"><?= $this->translate('Close'); ?></span>
             </button>
             <span class="text-semibold"><?= $this->translate('Danger!'); ?></span>
             <?= implode(', ', $this->messages); ?>
@@ -28,8 +28,9 @@ $form->setAttribute(
 
     <div class="text-center">
         <div class="icon-object border-slate-300 text-slate-300"><i class="icon-reading"></i></div>
-        <h5 class="content-group">Login to your account
-            <small class="display-block">Enter your credentials below</small>
+        <h5 class="content-group">
+            <?= $this->translate('Login to your account'); ?>
+            <small class="display-block"><?= $this->translate('Enter your credentials below'); ?></small>
         </h5>
     </div>
 
@@ -61,7 +62,7 @@ $form->setAttribute(
     </div>
 
     <div class="text-center">
-        <a href="#">Forgot password?</a>
+        <a href="#"><?= $this->translate('Forgot password?'); ?></a>
     </div>
 </div>
 <?= $this->form()->closeTag($form); ?>
