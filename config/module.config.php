@@ -234,9 +234,6 @@ return [
             // some thing
         ],
         'factories' => [
-            // InputFilter\ModuleInputFilter::class => Factory\LazyInputFilterFactory::class,
-            // InputFilter\TemplateInputFilter::class => Factory\LazyInputFilterFactory::class,
-            // InputFilter\UserInputFilter::class => Factory\LazyInputFilterFactory::class
         ]
     ],
 

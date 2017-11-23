@@ -1,0 +1,236 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MSBios Guard CPanel\n"
+"POT-Creation-Date: 2017-11-23 16:37+0200\n"
+"PO-Revision-Date: 2017-11-23 16:37+0200\n"
+"Last-Translator: \n"
+"Language-Team: MSBios Team <info@msbios.com>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _;translate;addSuccessMessage\n"
+"X-Poedit-SearchPath-0: config\n"
+"X-Poedit-SearchPath-1: src\n"
+
+#: config/module.config.php:126
+msgid "Access Control List"
+msgstr "Список контроля доступа"
+
+#: config/module.config.php:132
+msgid "Users"
+msgstr "Пользователи"
+
+#: config/module.config.php:136
+msgid "Create new user"
+msgstr "Создать нового пользователя"
+
+#: config/module.config.php:140
+msgid "Edit user record"
+msgstr "Изменить запись пользователя"
+
+#: config/module.config.php:147
+msgid "Resources"
+msgstr "Ресурсы"
+
+#: config/module.config.php:151
+msgid "Create new resource"
+msgstr "Создать новый ресурс"
+
+#: config/module.config.php:155
+msgid "Edit user resource"
+msgstr "Редактировать пользовательский ресурс"
+
+#: config/module.config.php:159
+msgid "Resource Permissions"
+msgstr "Разрешения для ресурсов"
+
+#: config/module.config.php:163
+msgid "Create resource permission"
+msgstr "Создать разрешение ресурса"
+
+#: config/module.config.php:167
+msgid "Edit resource permission"
+msgstr "Редагувати дозволи на ресурси"
+
+#: config/module.config.php:176
+msgid "Roles"
+msgstr "Роли"
+
+#: config/module.config.php:180
+msgid "Create new role"
+msgstr "Создать новую роль"
+
+#: config/module.config.php:184
+msgid "Edit user role"
+msgstr "Изменить роль пользователя"
+
+#: config/module.config.php:191
+msgid "Rules"
+msgstr "Правила"
+
+#: config/module.config.php:195
+msgid "Create new rule"
+msgstr "Создать новое правило"
+
+#: config/module.config.php:199
+msgid "Edit rule"
+msgstr "Изменить правило"
+
+#~ msgid "Close"
+#~ msgstr "Закрыть"
+
+#~ msgid "Danger!"
+#~ msgstr "Опасность!"
+
+#~ msgid "Login to your account"
+#~ msgstr "Войдите в свой аккаунт"
+
+#~ msgid "Enter your credentials below"
+#~ msgstr "Введите свои учетные данные ниже"
+
+#~ msgid "Username"
+#~ msgstr "Имя пользователя"
+
+#~ msgid "Password"
+#~ msgstr "Пароль"
+
+#~ msgid "Sign in"
+#~ msgstr "Войти в систему"
+
+#~ msgid "Forgot password?"
+#~ msgstr "Забыли пароль?"
+
+#~ msgid "Enter user first name"
+#~ msgstr "Введите имя пользователя"
+
+#~ msgid "First Name"
+#~ msgstr "Имя"
+
+#~ msgid "Enter user last name"
+#~ msgstr "Введите фамилию пользователя"
+
+#~ msgid "Last Name"
+#~ msgstr "Фамилия"
+
+#~ msgid "Enter username"
+#~ msgstr "Введите имя пользователя"
+
+#~ msgid "Enter user email"
+#~ msgstr "Введите адрес электронной почты пользователя"
+
+#~ msgid "Enter user password"
+#~ msgstr "Введите пароль пользователя"
+
+#~ msgid "Confirm user password"
+#~ msgstr "Подтверждение пароля пользователя"
+
+#~ msgid "Confirm"
+#~ msgstr "Подтвердить"
+
+#~ msgid "Reset"
+#~ msgstr "Сброс"
+
+#~ msgid "Submit"
+#~ msgstr "Отправить"
+
+#~ msgid "Information message"
+#~ msgstr "Информационное сообщение"
+
+#~ msgid ""
+#~ "The database is not created at the moment no resource, click \"Create new "
+#~ "resource\" to start working with the resource."
+#~ msgstr ""
+#~ "База данных не создается в настоящий момент без ресурса, нажмите «Создать "
+#~ "новый ресурс», чтобы начать работу с ресурсом."
+
+#~ msgid "Parent"
+#~ msgstr "Родитель"
+
+#~ msgid "Code"
+#~ msgstr "Код"
+
+#~ msgid "Name"
+#~ msgstr "Имя"
+
+#~ msgid "Actions"
+#~ msgstr "Действия"
+
+#~ msgid ""
+#~ "The database is not created at the moment no role, click \"Create new role"
+#~ "\" to start working with the resource."
+#~ msgstr ""
+#~ "База данных не создается в настоящий момент без роли, нажмите «Создать "
+#~ "новую роль», чтобы начать работу с ресурсом."
+
+#~ msgid ""
+#~ "The database is not created at the moment no user, click \"Create new user"
+#~ "\" to start working with the user."
+#~ msgstr ""
+#~ "База данных не создается в настоящий момент без пользователя, нажмите "
+#~ "«Создать нового пользователя», чтобы начать работать с пользователем."
+
+#~ msgid "Dashboard"
+#~ msgstr "Панель управления"
+
+#~ msgid "System"
+#~ msgstr "Система"
+
+#~ msgid "Layouts"
+#~ msgstr "Макеты"
+
+#~ msgid "Modules"
+#~ msgstr "Модули"
+
+#~ msgid "Page Types"
+#~ msgstr "Типы страниц"
+
+#~ msgid "Routes"
+#~ msgstr "Маршруты"
+
+#~ msgid "Setting"
+#~ msgstr "Настройки"
+
+#~ msgid "Themes"
+#~ msgstr "Темы"
+
+#~ msgid "Widgets"
+#~ msgstr "Виджеты"
+
+#~ msgid "Entities has been removed"
+#~ msgstr "Сущности были удалены"
+
+#~ msgid "Entity has been create"
+#~ msgstr "Сущность была создана"
+
+#~ msgid "Entity has been update"
+#~ msgstr "Сущность была обновлена"
+
+#~ msgid "Entity has been removed"
+#~ msgstr "Сущность была удалена"
+
+#~ msgid "Success!"
+#~ msgstr "Успешно"
+
+#~ msgid "Warning!"
+#~ msgstr "Предупреждение!"
+
+#~ msgid "Enter layout title"
+#~ msgstr "Введите название макета"
+
+#~ msgid "Title"
+#~ msgstr "Заглавие"
+
+#~ msgid "Enter layout identifier"
+#~ msgstr "Введите идентификатор макета"
+
+#~ msgid "Template"
+#~ msgstr "Шаблон"
+
+#~ msgid "File manager"
+#~ msgstr "Файловый менеджер"
