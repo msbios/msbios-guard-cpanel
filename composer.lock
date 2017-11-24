@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "fbd9325c2492753c3030b46cbb8a9c32",
+    "content-hash": "e1be906843d4ef0eef4aef251a4f9995",
     "packages": [],
     "packages-dev": [
         {
@@ -368,16 +368,16 @@
         },
         {
             "name": "msbios/application",
-            "version": "v1.0.4",
+            "version": "v1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-application.git",
-                "reference": "06b175b5b7672687d44f17f855372686a2df450c"
+                "reference": "195e7a10d5b4d4c41c0c99e24d0e405ac22dfcf1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-application/zipball/06b175b5b7672687d44f17f855372686a2df450c",
-                "reference": "06b175b5b7672687d44f17f855372686a2df450c",
+                "url": "https://api.github.com/repos/msbios/msbios-application/zipball/195e7a10d5b4d4c41c0c99e24d0e405ac22dfcf1",
+                "reference": "195e7a10d5b4d4c41c0c99e24d0e405ac22dfcf1",
                 "shasum": ""
             },
             "require": {
@@ -419,7 +419,7 @@
             "keywords": [
                 "php"
             ],
-            "time": "2017-11-04T22:46:20+00:00"
+            "time": "2017-11-24T17:15:03+00:00"
         },
         {
             "name": "msbios/assetic",
@@ -524,16 +524,16 @@
         },
         {
             "name": "msbios/cpanel",
-            "version": "v1.0.12",
+            "version": "v1.0.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-cpanel.git",
-                "reference": "b111805dfbc02f3f7f9f8318a24939faafaae494"
+                "reference": "6ea63485157c507b0d2704ec59158c0455e6f44c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-cpanel/zipball/b111805dfbc02f3f7f9f8318a24939faafaae494",
-                "reference": "b111805dfbc02f3f7f9f8318a24939faafaae494",
+                "url": "https://api.github.com/repos/msbios/msbios-cpanel/zipball/6ea63485157c507b0d2704ec59158c0455e6f44c",
+                "reference": "6ea63485157c507b0d2704ec59158c0455e6f44c",
                 "shasum": ""
             },
             "require": {
@@ -577,7 +577,7 @@
             "keywords": [
                 "php"
             ],
-            "time": "2017-11-24T15:35:13+00:00"
+            "time": "2017-11-24T17:25:23+00:00"
         },
         {
             "name": "msbios/debug",
@@ -684,33 +684,38 @@
         },
         {
             "name": "msbios/guard",
-            "version": "v1.0.0",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-guard.git",
-                "reference": "6274134ab3cb6005951580eee948c14d13da0e8e"
+                "reference": "33234bf407701ddda23bca8f3920914173891119"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-guard/zipball/6274134ab3cb6005951580eee948c14d13da0e8e",
-                "reference": "6274134ab3cb6005951580eee948c14d13da0e8e",
+                "url": "https://api.github.com/repos/msbios/msbios-guard/zipball/33234bf407701ddda23bca8f3920914173891119",
+                "reference": "33234bf407701ddda23bca8f3920914173891119",
                 "shasum": ""
             },
             "require": {
-                "msbios/msbios": "~1.0",
                 "zendframework/zend-http": "^2.6",
-                "zendframework/zend-loader": "^2.5",
-                "zendframework/zend-permissions-acl": "^2.6",
-                "zendframework/zend-servicemanager": "^3.3"
+                "zendframework/zend-permissions-acl": "^2.6"
             },
             "require-dev": {
-                "msbios/application": "~1.0",
-                "msbios/debug": "~1.0",
-                "phpunit/phpunit": "^5.7",
-                "squizlabs/php_codesniffer": "^3.0",
-                "zendframework/zend-test": "^3.1"
+                "msbios/application": "^1.0",
+                "msbios/authentication": "^1.0",
+                "msbios/cpanel": "^1.0",
+                "msbios/debug": "^1.0",
+                "msbios/guard-cpanel": "^1.0",
+                "msbios/guard-resource": "^1.0",
+                "msbios/resource": "^1.0",
+                "msbios/test": "^1.0"
             },
             "type": "library",
+            "extra": {
+                "zf": {
+                    "component": "MSBios\\Guard"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "MSBios\\Guard\\": "src/"
@@ -731,36 +736,31 @@
             "keywords": [
                 "php"
             ],
-            "time": "2017-09-09T22:16:06+00:00"
+            "time": "2017-11-24T21:10:17+00:00"
         },
         {
             "name": "msbios/guard-resource",
-            "version": "v1.0.14",
+            "version": "v1.0.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-guard-resource.git",
-                "reference": "270aa2f0ab3b4e098ea842ca0c5bb7ee118834a6"
+                "reference": "87b8dc5e4ebcfd7c7418a563fd12adfc876d4089"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-guard-resource/zipball/270aa2f0ab3b4e098ea842ca0c5bb7ee118834a6",
-                "reference": "270aa2f0ab3b4e098ea842ca0c5bb7ee118834a6",
+                "url": "https://api.github.com/repos/msbios/msbios-guard-resource/zipball/87b8dc5e4ebcfd7c7418a563fd12adfc876d4089",
+                "reference": "87b8dc5e4ebcfd7c7418a563fd12adfc876d4089",
                 "shasum": ""
             },
-            "require": {
-                "msbios/authentication": "~1.0",
-                "msbios/guard": "~1.0",
-                "msbios/resource": "~1.0",
-                "zendframework/zend-loader": "^2.5",
-                "zendframework/zend-modulemanager": "^2.8",
-                "zendframework/zend-servicemanager": "^3.3"
-            },
             "require-dev": {
-                "phpunit/phpunit": "^5.7",
-                "squizlabs/php_codesniffer": "^3.0",
-                "zendframework/zend-test": "^3.1"
+                "msbios/resource": "^1.0"
             },
             "type": "library",
+            "extra": {
+                "zf": {
+                    "component": "MSBios\\Guard\\Resource"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "MSBios\\Guard\\Resource\\": "src/"
@@ -781,7 +781,7 @@
             "keywords": [
                 "php"
             ],
-            "time": "2017-09-28T13:01:30+00:00"
+            "time": "2017-11-24T20:07:41+00:00"
         },
         {
             "name": "msbios/i18n",

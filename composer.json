@@ -23,8 +23,6 @@
       "MSBiosTest\\Guard\\CPanel\\": "tests/"
     }
   },
-  "require": {
-  },
   "require-dev": {
     "msbios/application": "^1.0",
     "msbios/cpanel": "^1.0",

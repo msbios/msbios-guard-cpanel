@@ -207,17 +207,18 @@ return [
     ],
 
     'service_manager' => [
-        'invokables' => [
-            // Listeners
-            Listener\ForbiddenListener::class
-        ],
+
         'factories' => [
             Module::class =>
                 Factory\ModuleFactory::class,
 
             // Providers
             Provider\Identity\AuthenticationProvider::class =>
-                Factory\AuthenticationProviderFactory::class
+                Factory\AuthenticationProviderFactory::class,
+
+            // Listeners
+            Listener\ForbiddenListener::class =>
+                InvokableFactory::class
         ]
     ],
 
