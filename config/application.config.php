@@ -8,7 +8,16 @@
 return [
     // Retrieve list of modules used in this application.
     'modules' => [
-
+        'MSBios\Test',
+        'MSBios\Form',
+        'Zend\Db',
+        'MSBios\I18n',
+        'Zend\Mvc\Plugin\FilePrg',
+        'Zend\Filter',
+        'Zend\Mvc\Plugin\Identity',
+        'Zend\Mvc\Plugin\Prg',
+        'Zend\Validator',
+        'Zend\Session',
         'Zend\Form',
 
         'Zend\Mvc\Plugin\FlashMessenger',
@@ -17,9 +26,6 @@ return [
         'Zend\Router',
         'Zend\InputFilter',
         'Zend\Hydrator',
-
-        'DoctrineModule',
-        'DoctrineORMModule',
 
         'MSBios\Assetic',
         'MSBios\Widget',

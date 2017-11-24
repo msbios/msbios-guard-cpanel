@@ -101,7 +101,6 @@ return [
     'controllers' => [
 
         'abstract_factories' => [
-            // Mvc\Controller\LazyControllerAbstractFactory::class,
         ],
 
         'factories' => [
@@ -342,6 +341,7 @@ return [
     ],
 
     Module::class => [
+
         // Layout for authentication view
         'default_layout_authorized' => 'layout/login_simple',
 

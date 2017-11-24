@@ -6,8 +6,8 @@
 namespace MSBios\Guard\CPanel\Factory;
 
 use Interop\Container\ContainerInterface;
+use MSBios\Authentication\AuthenticationService;
 use MSBios\Guard\CPanel\Controller\AuthenticationController;
-use Zend\Authentication\AuthenticationService;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 /**

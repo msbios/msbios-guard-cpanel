@@ -10,7 +10,7 @@ namespace MSBios\Guard\CPanel\Controller;
 use MSBios\CPanel\Mvc\Controller\ActionControllerInterface;
 use MSBios\Guard\CPanel\Form\LoginForm;
 use MSBios\Guard\CPanel\Module;
-use Zend\Authentication\AuthenticationService;
+use Zend\Authentication\AuthenticationServiceInterface;
 use Zend\Authentication\Result;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\Mvc\Controller\Plugin\Redirect;
@@ -23,7 +23,7 @@ use Zend\View\Model\ViewModel;
  */
 class AuthenticationController extends AbstractActionController implements ActionControllerInterface
 {
-    /** @var  AuthenticationService */
+    /** @var  AuthenticationServiceInterface */
     protected $authenticationService;
 
     /** @var ServiceLocatorInterface */
@@ -31,11 +31,13 @@ class AuthenticationController extends AbstractActionController implements Actio
 
     /**
      * AuthenticationController constructor.
-     * @param AuthenticationService $authenticationService
+     * @param AuthenticationServiceInterface $authenticationService
      * @param ServiceLocatorInterface $serviceManager
      */
-    public function __construct(AuthenticationService $authenticationService, ServiceLocatorInterface $serviceManager)
-    {
+    public function __construct(
+        AuthenticationServiceInterface $authenticationService,
+        ServiceLocatorInterface $serviceManager
+    ) {
         $this->authenticationService = $authenticationService;
         $this->serviceManager = $serviceManager;
     }
