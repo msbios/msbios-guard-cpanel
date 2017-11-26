@@ -7,7 +7,6 @@
 namespace MSBios\Guard\CPanel;
 
 use Zend\Router\Http\Segment;
-use Zend\ServiceManager\Factory\InvokableFactory;
 
 return [
 
@@ -15,18 +14,6 @@ return [
         'routes' => [
             'cpanel' => [
                 'child_routes' => [
-                    // 'authentication' => [
-                    //     'type' => Segment::class,
-                    //     'options' => [
-                    //         'route' => ':action[/]',
-                    //         'defaults' => [
-                    //             'controller' => Controller\AuthenticationController::class,
-                    //         ],
-                    //         'constraints' => [
-                    //             'action' => 'login|logout'
-                    //         ]
-                    //     ]
-                    // ],
                     'resource' => [
                         'type' => Segment::class,
                         'options' => [
@@ -104,8 +91,6 @@ return [
         ],
 
         'factories' => [
-            // Controller\AuthenticationController::class =>
-            //     Factory\AuthenticationControllerFactory::class,
             Controller\ResourceController::class =>
                 \MSBios\CPanel\Factory\LazyActionControllerFactory::class,
             Controller\Resource\PermissionController::class =>
@@ -211,60 +196,25 @@ return [
         'factories' => [
             Module::class =>
                 Factory\ModuleFactory::class,
-
-            //// Providers
-            //Provider\Identity\AuthenticationProvider::class =>
-            //    Factory\AuthenticationProviderFactory::class,
-
-            // Listeners
-            // Listener\ForbiddenListener::class =>
-            //     InvokableFactory::class,
-
-            //Authentication\Storage\ResourceStorage::class =>
-            //    InvokableFactory::class,
-
-        ],
-        'aliases' => [
-            //\MSBios\Authentication\Storage\ResourceStorage::class =>
-            //    Authentication\Storage\ResourceStorage::class
         ]
 
     ],
 
     'form_elements' => [
         'factories' => [
-            Form\LoginForm::class =>
-                InvokableFactory::class,
         ]
     ],
 
     'input_filters' => [
-        'invokables' => [
-            // some thing
-        ],
         'factories' => [
         ]
     ],
 
-    //'table_manager' => [
-    //    'aliases' => [
-    //        Authentication\Storage\ResourceStorage::class =>
-    //            \MSBios\Guard\Resource\Table\UserTableGateway::class
-    //    ]
-    //],
-
     \MSBios\Theme\Module::class => [
         'themes' => [
             'limitless' => [
-
-                'template_map' => [
-                    'error/403' => __DIR__ . '/../themes/limitless/view/error/403.phtml'
-                ],
-
                 'template_path_stack' => [
                     __DIR__ . '/../themes/limitless/view/',
-                ],
-                'controller_map' => [
                 ],
                 'translation_file_patterns' => [
                     [
@@ -324,8 +274,6 @@ return [
 
     \MSBios\Guard\Module::class => [
 
-        // 'identity_provider' => Provider\Identity\AuthenticationProvider::class,
-
         'role_providers' => [
             \MSBios\Guard\Provider\RoleProvider::class => [
             ]
@@ -333,9 +281,10 @@ return [
 
         'resource_providers' => [
             \MSBios\Guard\Provider\ResourceProvider::class => [
-                // Controller\AuthenticationController::class => [],
                 Controller\ResourceController::class => [],
-                Controller\Resource\PermissionController::class => [], // TODO: Возможно нужно правильно построить родителя
+
+                // TODO: Возможно нужно правильно построить родителя
+                Controller\Resource\PermissionController::class => [],
                 Controller\RoleController::class => [],
                 Controller\RuleController::class => [],
                 Controller\UserController::class => []
@@ -345,7 +294,6 @@ return [
         'rule_providers' => [
             \MSBios\Guard\Provider\RuleProvider::class => [
                 'allow' => [
-                    // [['GUEST'], Controller\AuthenticationController::class],
                     [['DEVELOPER'], Controller\ResourceController::class],
                     [['DEVELOPER'], Controller\Resource\PermissionController::class],
                     [['DEVELOPER'], Controller\RoleController::class],
@@ -358,18 +306,7 @@ return [
     ],
 
     Module::class => [
-
-        // Layout for authentication view
-        'default_layout_authorized' => 'layout/login_simple',
-
-        // Module listeners
         'listeners' => [
-            //Listener\ForbiddenListener::class => [
-            //    'listener' => Listener\ForbiddenListener::class,
-            //    'method' => 'onDispatchError',
-            //    'event' => \Zend\Mvc\MvcEvent::EVENT_DISPATCH_ERROR,
-            //    'priority' => -100900,
-            //],
         ]
     ],
 ];
