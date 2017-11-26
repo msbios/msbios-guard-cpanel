@@ -345,7 +345,7 @@ return [
         'rule_providers' => [
             \MSBios\Guard\Provider\RuleProvider::class => [
                 'allow' => [
-                    [['GUEST'], Controller\AuthenticationController::class],
+                    // [['GUEST'], Controller\AuthenticationController::class],
                     [['DEVELOPER'], Controller\ResourceController::class],
                     [['DEVELOPER'], Controller\Resource\PermissionController::class],
                     [['DEVELOPER'], Controller\RoleController::class],
