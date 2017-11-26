@@ -524,16 +524,16 @@
         },
         {
             "name": "msbios/cpanel",
-            "version": "v1.0.13",
+            "version": "v1.0.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-cpanel.git",
-                "reference": "6ea63485157c507b0d2704ec59158c0455e6f44c"
+                "reference": "a34c92309525ffb7f5e493f7e59f6b6b09df8c8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-cpanel/zipball/6ea63485157c507b0d2704ec59158c0455e6f44c",
-                "reference": "6ea63485157c507b0d2704ec59158c0455e6f44c",
+                "url": "https://api.github.com/repos/msbios/msbios-cpanel/zipball/a34c92309525ffb7f5e493f7e59f6b6b09df8c8e",
+                "reference": "a34c92309525ffb7f5e493f7e59f6b6b09df8c8e",
                 "shasum": ""
             },
             "require": {
@@ -577,7 +577,7 @@
             "keywords": [
                 "php"
             ],
-            "time": "2017-11-24T17:25:23+00:00"
+            "time": "2017-11-26T17:24:25+00:00"
         },
         {
             "name": "msbios/db",
@@ -733,16 +733,16 @@
         },
         {
             "name": "msbios/guard",
-            "version": "v1.0.5",
+            "version": "v1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-guard.git",
-                "reference": "f6ef4d96853ce34e21c6dd1bd9c6e1a9dfaf5b9b"
+                "reference": "12453d259940147882bec291a42d8977d2366d89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-guard/zipball/f6ef4d96853ce34e21c6dd1bd9c6e1a9dfaf5b9b",
-                "reference": "f6ef4d96853ce34e21c6dd1bd9c6e1a9dfaf5b9b",
+                "url": "https://api.github.com/repos/msbios/msbios-guard/zipball/12453d259940147882bec291a42d8977d2366d89",
+                "reference": "12453d259940147882bec291a42d8977d2366d89",
                 "shasum": ""
             },
             "require": {
@@ -752,9 +752,7 @@
             "require-dev": {
                 "msbios/application": "^1.0",
                 "msbios/authentication": "^1.0",
-                "msbios/cpanel": "^1.0",
                 "msbios/debug": "^1.0",
-                "msbios/guard-cpanel": "^1.0",
                 "msbios/guard-resource": "^1.0",
                 "msbios/resource": "^1.0",
                 "msbios/test": "^1.0"
@@ -785,7 +783,7 @@
             "keywords": [
                 "php"
             ],
-            "time": "2017-11-25T14:31:54+00:00"
+            "time": "2017-11-26T17:22:11+00:00"
         },
         {
             "name": "msbios/guard-resource",

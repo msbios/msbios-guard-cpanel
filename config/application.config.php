@@ -9,6 +9,7 @@ return [
     // Retrieve list of modules used in this application.
     'modules' => [
         'MSBios\Db',
+        'MSBios\Form',
         'Zend\Db',
         'Zend\Mvc\Plugin\Prg',
         'Zend\Mvc\Plugin\Identity',
@@ -22,16 +23,15 @@ return [
         'MSBios\Test',
         'MSBios\I18n',
         'MSBios\Assetic',
-        'MSBios\Form',
         'MSBios\Widget',
         'MSBios\Theme',
         'MSBios\Navigation',
         'MSBios\Application',
+        'MSBios\Resource',
         'MSBios\Authentication',
         'MSBios\Guard',
         'MSBios\CPanel',
         'MSBios\Guard\CPanel',
-        'MSBios\Resource',
         'MSBios\Guard\Resource',
 
         'Zend\Log',

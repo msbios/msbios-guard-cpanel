@@ -364,12 +364,12 @@ return [
 
         // Module listeners
         'listeners' => [
-            Listener\ForbiddenListener::class => [
-                'listener' => Listener\ForbiddenListener::class,
-                'method' => 'onDispatchError',
-                'event' => \Zend\Mvc\MvcEvent::EVENT_DISPATCH_ERROR,
-                'priority' => -100900,
-            ],
+            //Listener\ForbiddenListener::class => [
+            //    'listener' => Listener\ForbiddenListener::class,
+            //    'method' => 'onDispatchError',
+            //    'event' => \Zend\Mvc\MvcEvent::EVENT_DISPATCH_ERROR,
+            //    'priority' => -100900,
+            //],
         ]
     ],
 ];
