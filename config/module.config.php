@@ -15,18 +15,18 @@ return [
         'routes' => [
             'cpanel' => [
                 'child_routes' => [
-                    'authentication' => [
-                        'type' => Segment::class,
-                        'options' => [
-                            'route' => ':action[/]',
-                            'defaults' => [
-                                'controller' => Controller\AuthenticationController::class,
-                            ],
-                            'constraints' => [
-                                'action' => 'login|logout'
-                            ]
-                        ]
-                    ],
+                    // 'authentication' => [
+                    //     'type' => Segment::class,
+                    //     'options' => [
+                    //         'route' => ':action[/]',
+                    //         'defaults' => [
+                    //             'controller' => Controller\AuthenticationController::class,
+                    //         ],
+                    //         'constraints' => [
+                    //             'action' => 'login|logout'
+                    //         ]
+                    //     ]
+                    // ],
                     'resource' => [
                         'type' => Segment::class,
                         'options' => [
@@ -104,8 +104,8 @@ return [
         ],
 
         'factories' => [
-            Controller\AuthenticationController::class =>
-                Factory\AuthenticationControllerFactory::class,
+            // Controller\AuthenticationController::class =>
+            //     Factory\AuthenticationControllerFactory::class,
             Controller\ResourceController::class =>
                 \MSBios\CPanel\Factory\LazyActionControllerFactory::class,
             Controller\Resource\PermissionController::class =>
@@ -212,14 +212,23 @@ return [
             Module::class =>
                 Factory\ModuleFactory::class,
 
-            // Providers
-            Provider\Identity\AuthenticationProvider::class =>
-                Factory\AuthenticationProviderFactory::class,
+            //// Providers
+            //Provider\Identity\AuthenticationProvider::class =>
+            //    Factory\AuthenticationProviderFactory::class,
 
             // Listeners
             Listener\ForbiddenListener::class =>
-                InvokableFactory::class
+                InvokableFactory::class,
+
+            //Authentication\Storage\ResourceStorage::class =>
+            //    InvokableFactory::class,
+
+        ],
+        'aliases' => [
+            //\MSBios\Authentication\Storage\ResourceStorage::class =>
+            //    Authentication\Storage\ResourceStorage::class
         ]
+
     ],
 
     'form_elements' => [
@@ -236,6 +245,13 @@ return [
         'factories' => [
         ]
     ],
+
+    //'table_manager' => [
+    //    'aliases' => [
+    //        Authentication\Storage\ResourceStorage::class =>
+    //            \MSBios\Guard\Resource\Table\UserTableGateway::class
+    //    ]
+    //],
 
     \MSBios\Theme\Module::class => [
         'themes' => [
@@ -308,7 +324,7 @@ return [
 
     \MSBios\Guard\Module::class => [
 
-        'identity_provider' => Provider\Identity\AuthenticationProvider::class,
+        // 'identity_provider' => Provider\Identity\AuthenticationProvider::class,
 
         'role_providers' => [
             \MSBios\Guard\Provider\RoleProvider::class => [

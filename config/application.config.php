@@ -8,6 +8,7 @@
 return [
     // Retrieve list of modules used in this application.
     'modules' => [
+        'MSBios\Db',
         'Zend\Db',
         'Zend\Mvc\Plugin\Prg',
         'Zend\Mvc\Plugin\Identity',
