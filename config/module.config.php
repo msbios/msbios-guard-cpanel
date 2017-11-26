@@ -217,8 +217,8 @@ return [
             //    Factory\AuthenticationProviderFactory::class,
 
             // Listeners
-            Listener\ForbiddenListener::class =>
-                InvokableFactory::class,
+            // Listener\ForbiddenListener::class =>
+            //     InvokableFactory::class,
 
             //Authentication\Storage\ResourceStorage::class =>
             //    InvokableFactory::class,
@@ -333,7 +333,7 @@ return [
 
         'resource_providers' => [
             \MSBios\Guard\Provider\ResourceProvider::class => [
-                Controller\AuthenticationController::class => [],
+                // Controller\AuthenticationController::class => [],
                 Controller\ResourceController::class => [],
                 Controller\Resource\PermissionController::class => [], // TODO: Возможно нужно правильно построить родителя
                 Controller\RoleController::class => [],
