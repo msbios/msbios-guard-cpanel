@@ -6,13 +6,8 @@
 
 namespace MSBios\Guard\CPanel;
 
-use MSBios\ModuleInterface;
 use Zend\EventManager\EventInterface;
 use Zend\EventManager\LazyListenerAggregate;
-use Zend\Loader\AutoloaderFactory;
-use Zend\Loader\StandardAutoloader;
-use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
-use Zend\ModuleManager\Feature\BootstrapListenerInterface;
 use Zend\Mvc\ApplicationInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
@@ -20,23 +15,14 @@ use Zend\ServiceManager\ServiceLocatorInterface;
  * Class Module
  * @package MSBios\Guard\CPanel
  */
-class Module implements
-    ModuleInterface,
-    BootstrapListenerInterface,
-    AutoloaderProviderInterface
+class Module extends \MSBios\Module
 {
     /** @const VERSION */
-    const VERSION = '1.0.22';
+    const VERSION = '1.0.23';
 
     /**
-     * @return mixed
-     */
-    public function getConfig()
-    {
-        return include __DIR__ . '/../config/module.config.php';
-    }
-
-    /**
+     * @inheritdoc
+     *
      * @param EventInterface $event
      */
     public function onBootstrap(EventInterface $event)
@@ -54,18 +40,22 @@ class Module implements
     }
 
     /**
-     * Return an array for passing to Zend\Loader\AutoloaderFactory.
+     * @inheritdoc
      *
-     * @return array
+     * @return string
      */
-    public function getAutoloaderConfig()
+    protected function getDir()
     {
-        return [
-            AutoloaderFactory::STANDARD_AUTOLOADER => [
-                StandardAutoloader::LOAD_NS => [
-                    __NAMESPACE__ => __DIR__,
-                ],
-            ],
-        ];
+        return __DIR__;
+    }
+
+    /**
+     * @inheritdoc
+     *
+     * @return string
+     */
+    protected function getNamespace()
+    {
+        return __NAMESPACE__;
     }
 }
