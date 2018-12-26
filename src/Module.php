@@ -6,11 +6,6 @@
 
 namespace MSBios\Guard\CPanel;
 
-use Zend\EventManager\EventInterface;
-use Zend\EventManager\LazyListenerAggregate;
-use Zend\Mvc\ApplicationInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
-
 /**
  * Class Module
  * @package MSBios\Guard\CPanel
@@ -18,26 +13,7 @@ use Zend\ServiceManager\ServiceLocatorInterface;
 class Module extends \MSBios\Module
 {
     /** @const VERSION */
-    const VERSION = '1.0.23';
-
-    /**
-     * @inheritdoc
-     *
-     * @param EventInterface $event
-     */
-    public function onBootstrap(EventInterface $event)
-    {
-        /** @var ApplicationInterface $target */
-        $target = $event->getTarget();
-
-        /** @var ServiceLocatorInterface $serviceManager */
-        $serviceManager = $target->getServiceManager();
-
-        (new LazyListenerAggregate(
-            $serviceManager->get(self::class)['listeners'],
-            $serviceManager
-        ))->attach($target->getEventManager());
-    }
+    const VERSION = '1.0.24';
 
     /**
      * @inheritdoc

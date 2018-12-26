@@ -534,16 +534,16 @@
         },
         {
             "name": "msbios/authentication",
-            "version": "v1.0.17",
+            "version": "v1.0.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-authentication.git",
-                "reference": "2b54090ef524cfda923dffb0f62b0fbd988fd39e"
+                "reference": "a9924eb7d6a6630443040371472d334b20e0c402"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-authentication/zipball/2b54090ef524cfda923dffb0f62b0fbd988fd39e",
-                "reference": "2b54090ef524cfda923dffb0f62b0fbd988fd39e",
+                "url": "https://api.github.com/repos/msbios/msbios-authentication/zipball/a9924eb7d6a6630443040371472d334b20e0c402",
+                "reference": "a9924eb7d6a6630443040371472d334b20e0c402",
                 "shasum": ""
             },
             "require": {
@@ -580,20 +580,20 @@
             "keywords": [
                 "php"
             ],
-            "time": "2018-12-10T11:15:36+00:00"
+            "time": "2018-12-24T11:56:15+00:00"
         },
         {
             "name": "msbios/cache",
-            "version": "v1.0.3",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-cache.git",
-                "reference": "f5ce93fa546fb44351734d41864ee1f929f7a787"
+                "reference": "1e48c47621bdf9e8d7a1e6b49f29433bb115bbdc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-cache/zipball/f5ce93fa546fb44351734d41864ee1f929f7a787",
-                "reference": "f5ce93fa546fb44351734d41864ee1f929f7a787",
+                "url": "https://api.github.com/repos/msbios/msbios-cache/zipball/1e48c47621bdf9e8d7a1e6b49f29433bb115bbdc",
+                "reference": "1e48c47621bdf9e8d7a1e6b49f29433bb115bbdc",
                 "shasum": ""
             },
             "require": {
@@ -603,6 +603,7 @@
             },
             "require-dev": {
                 "msbios/debug": "^1.0",
+                "msbios/stdlib": "^1.0",
                 "msbios/test": "^1.0"
             },
             "type": "library",
@@ -631,20 +632,20 @@
             "keywords": [
                 "php"
             ],
-            "time": "2018-03-17T23:22:58+00:00"
+            "time": "2018-12-25T09:14:44+00:00"
         },
         {
             "name": "msbios/cpanel",
-            "version": "v1.0.50",
+            "version": "v1.0.55",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-cpanel.git",
-                "reference": "6a64fa47af39bae262cdfe426af07755ee3a609f"
+                "reference": "5ff6090146d90c4caa66382665ed8eb8324564f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-cpanel/zipball/6a64fa47af39bae262cdfe426af07755ee3a609f",
-                "reference": "6a64fa47af39bae262cdfe426af07755ee3a609f",
+                "url": "https://api.github.com/repos/msbios/msbios-cpanel/zipball/5ff6090146d90c4caa66382665ed8eb8324564f1",
+                "reference": "5ff6090146d90c4caa66382665ed8eb8324564f1",
                 "shasum": ""
             },
             "require": {
@@ -691,7 +692,7 @@
             "keywords": [
                 "php"
             ],
-            "time": "2018-12-12T08:57:27+00:00"
+            "time": "2018-12-26T10:33:41+00:00"
         },
         {
             "name": "msbios/db",
@@ -849,22 +850,22 @@
         },
         {
             "name": "msbios/guard",
-            "version": "v1.0.30",
+            "version": "v1.0.32",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-guard.git",
-                "reference": "19234ec89d146f7da0a197b48ff3049cb228e83a"
+                "reference": "68c8aba1934756dd584986bc76730af6ef446e33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-guard/zipball/19234ec89d146f7da0a197b48ff3049cb228e83a",
-                "reference": "19234ec89d146f7da0a197b48ff3049cb228e83a",
+                "url": "https://api.github.com/repos/msbios/msbios-guard/zipball/68c8aba1934756dd584986bc76730af6ef446e33",
+                "reference": "68c8aba1934756dd584986bc76730af6ef446e33",
                 "shasum": ""
             },
             "require": {
                 "msbios/guard-resource": "^1.0",
-                "zendframework/zend-http": "^2.6",
-                "zendframework/zend-permissions-acl": "^2.6"
+                "msbios/permissions-acl": "^1.0",
+                "zendframework/zend-http": "^2.6"
             },
             "require-dev": {
                 "msbios/application": "^1.0",
@@ -900,7 +901,7 @@
             "keywords": [
                 "php"
             ],
-            "time": "2018-11-18T16:14:06+00:00"
+            "time": "2018-12-25T10:40:13+00:00"
         },
         {
             "name": "msbios/guard-resource",
@@ -1002,20 +1003,21 @@
         },
         {
             "name": "msbios/i18n",
-            "version": "v1.0.9",
+            "version": "v1.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-i18n.git",
-                "reference": "1ff9417715fe5bc3096d4f9b0a6108507a6d14b1"
+                "reference": "79bf9fe184e4ad20613ed5d089f011b1a854ae41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-i18n/zipball/1ff9417715fe5bc3096d4f9b0a6108507a6d14b1",
-                "reference": "1ff9417715fe5bc3096d4f9b0a6108507a6d14b1",
+                "url": "https://api.github.com/repos/msbios/msbios-i18n/zipball/79bf9fe184e4ad20613ed5d089f011b1a854ae41",
+                "reference": "79bf9fe184e4ad20613ed5d089f011b1a854ae41",
                 "shasum": ""
             },
             "require": {
                 "msbios/msbios": "^1.0",
+                "msbios/session": "^1.0",
                 "php": "^5.6 || ^7.0",
                 "zendframework/zend-i18n": "^2.7",
                 "zendframework/zend-session": "^2.8"
@@ -1050,7 +1052,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL"
+                "MIT"
             ],
             "authors": [
                 {
@@ -1063,7 +1065,7 @@
             "keywords": [
                 "php"
             ],
-            "time": "2018-12-22T19:19:25+00:00"
+            "time": "2018-12-24T19:17:29+00:00"
         },
         {
             "name": "msbios/json",
@@ -1214,6 +1216,57 @@
             "time": "2017-11-04T22:37:07+00:00"
         },
         {
+            "name": "msbios/permissions-acl",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/msbios/msbios-permissions-acl.git",
+                "reference": "9ff0dda6a59fd89ad0f7e15e1879ac1895e7fe63"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/msbios/msbios-permissions-acl/zipball/9ff0dda6a59fd89ad0f7e15e1879ac1895e7fe63",
+                "reference": "9ff0dda6a59fd89ad0f7e15e1879ac1895e7fe63",
+                "shasum": ""
+            },
+            "require": {
+                "msbios/cache": "^1.0",
+                "zendframework/zend-permissions-acl": "^2.7"
+            },
+            "require-dev": {
+                "msbios/application": "^1.0",
+                "msbios/debug": "^1.0",
+                "msbios/test": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "zf": {
+                    "component": "MSBios\\Permissions\\Acl"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MSBios\\Permissions\\Acl\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Judzhin Miles",
+                    "email": "info@msbios.com"
+                }
+            ],
+            "description": "MSBios Permissions Acl",
+            "homepage": "https://github.com/msbios/msbios-permissions-acl",
+            "keywords": [
+                "php"
+            ],
+            "time": "2018-12-25T10:35:31+00:00"
+        },
+        {
             "name": "msbios/resolver",
             "version": "v1.0.3",
             "source": {
@@ -1304,6 +1357,58 @@
                 "php"
             ],
             "time": "2018-11-18T19:53:21+00:00"
+        },
+        {
+            "name": "msbios/session",
+            "version": "v1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/msbios/msbios-session.git",
+                "reference": "0e62edf7146fee20ff4ae32cfe32f5dc3ba971bb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/msbios/msbios-session/zipball/0e62edf7146fee20ff4ae32cfe32f5dc3ba971bb",
+                "reference": "0e62edf7146fee20ff4ae32cfe32f5dc3ba971bb",
+                "shasum": ""
+            },
+            "require": {
+                "zendframework/zend-session": "^2.8"
+            },
+            "require-dev": {
+                "msbios/application": "^1.0",
+                "msbios/debug": "^1.0",
+                "msbios/mongodb": "^1.0",
+                "msbios/test": "^1.0",
+                "san/san-session-toolbar": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "zf": {
+                    "component": "MSBios\\Session"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MSBios\\Session\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Judzhin Miles",
+                    "email": "info@msbios.com"
+                }
+            ],
+            "description": "MSBios Session",
+            "homepage": "https://github.com/msbios/msbios-session",
+            "keywords": [
+                "php"
+            ],
+            "time": "2018-12-21T08:11:04+00:00"
         },
         {
             "name": "msbios/stdlib",
@@ -3853,20 +3958,21 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "0df1908962e7a3071564e857d86874dad1ef204a"
+                "reference": "83e253c8e0be5b0257b881e1827274667c5c17a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/0df1908962e7a3071564e857d86874dad1ef204a",
-                "reference": "0df1908962e7a3071564e857d86874dad1ef204a",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/83e253c8e0be5b0257b881e1827274667c5c17a9",
+                "reference": "83e253c8e0be5b0257b881e1827274667c5c17a9",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.3.3 || ^7.0"
+                "php": "^5.3.3 || ^7.0",
+                "symfony/polyfill-ctype": "^1.8"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.6",
@@ -3899,7 +4005,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2018-01-29T19:49:41+00:00"
+            "time": "2018-12-25T11:19:39+00:00"
         },
         {
             "name": "zendframework/zend-authentication",

@@ -8,6 +8,14 @@
 return [
     // Retrieve list of modules used in this application.
     'modules' => [
+        'Zend\Hydrator',
+        'Zend\InputFilter',
+        'Zend\Filter',
+        'Zend\Validator',
+        'MSBios\View',
+        'Zend\Session',
+        'MSBios\Session',
+        'MSBios\Permissions\Acl',
         'MSBios\Validator',
         'Zend\Paginator',
         'MSBios\Hydrator',

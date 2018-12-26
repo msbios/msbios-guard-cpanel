@@ -6,6 +6,8 @@
 
 namespace MSBios\Guard\CPanel;
 
+use MSBios\CPanel\Factory\ControllerFactory;
+use MSBios\Factory\ModuleFactory;
 use Zend\Router\Http\Segment;
 
 return [
@@ -86,21 +88,17 @@ return [
     ],
 
     'controllers' => [
-
-        'abstract_factories' => [
-        ],
-
         'factories' => [
             Controller\ResourceController::class =>
-                \MSBios\CPanel\Factory\LazyActionControllerFactory::class,
+                ControllerFactory::class,
             Controller\Resource\PermissionController::class =>
-                \MSBios\CPanel\Factory\LazyActionControllerFactory::class,
+                ControllerFactory::class,
             Controller\RoleController::class =>
-                \MSBios\CPanel\Factory\LazyActionControllerFactory::class,
+                ControllerFactory::class,
             Controller\RuleController::class =>
-                \MSBios\CPanel\Factory\LazyActionControllerFactory::class,
+                ControllerFactory::class,
             Controller\UserController::class =>
-                \MSBios\CPanel\Factory\LazyActionControllerFactory::class,
+                ControllerFactory::class,
         ]
     ],
 
@@ -111,10 +109,12 @@ return [
                 'uri' => '#',
                 'class' => 'icon-accessibility',
                 'order' => 100400,
+                'resource' => Mvc\Controller\ActionControllerInterface::class,
                 'pages' => [
                     'user' => [
                         'label' => _('Users'),
                         'route' => 'cpanel/user',
+                        'resource' => Controller\UserController::class,
                         'pages' => [
                             [
                                 'label' => _('Create new user'),
@@ -130,6 +130,7 @@ return [
                     'resource' => [
                         'label' => _('Resources'),
                         'route' => 'cpanel/resource',
+                        'resource' => Controller\ResourceController::class,
                         'pages' => [
                             [
                                 'label' => _('Create new resource'),
@@ -159,6 +160,7 @@ return [
                     'role' => [
                         'label' => _('Roles'),
                         'route' => 'cpanel/role',
+                        'resource' => Controller\RoleController::class,
                         'pages' => [
                             [
                                 'label' => _('Create new role'),
@@ -174,6 +176,7 @@ return [
                     'rule' => [
                         'label' => _('Rules'),
                         'route' => 'cpanel/rule',
+                        'resource' => Controller\RuleController::class,
                         'pages' => [
                             [
                                 'label' => _('Create new rule'),
@@ -192,21 +195,19 @@ return [
     ],
 
     'service_manager' => [
-
         'factories' => [
             Module::class =>
-                Factory\ModuleFactory::class,
-        ]
-
-    ],
-
-    'form_elements' => [
-        'factories' => [
+                ModuleFactory::class,
         ]
     ],
 
-    'input_filters' => [
-        'factories' => [
+    'translator' => [
+        'translation_file_patterns' => [
+            [
+                'type' => 'gettext',
+                'base_dir' => __DIR__ . '/../language',
+                'pattern' => '%s.mo'
+            ],
         ]
     ],
 
@@ -225,11 +226,9 @@ return [
                 ],
             ],
             'paper' => [
-
                 'template_map' => [
                     'error/403' => __DIR__ . '/../themes/paper/view/error/403.phtml'
                 ],
-
                 'template_path_stack' => [
                     __DIR__ . '/../themes/paper/view/',
                 ],
@@ -276,37 +275,29 @@ return [
 
         'role_providers' => [
             \MSBios\Guard\Provider\RoleProvider::class => [
+                // ...
             ]
         ],
 
         'resource_providers' => [
             \MSBios\Guard\Provider\ResourceProvider::class => [
-                Controller\ResourceController::class => [],
-
-                // TODO: Возможно нужно правильно построить родителя
-                Controller\Resource\PermissionController::class => [],
-                Controller\RoleController::class => [],
-                Controller\RuleController::class => [],
-                Controller\UserController::class => []
+                Mvc\Controller\ActionControllerInterface::class => [
+                    Controller\ResourceController::class,
+                    Controller\Resource\PermissionController::class,
+                    Controller\RoleController::class,
+                    Controller\RuleController::class,
+                    Controller\UserController::class
+                ]
             ]
         ],
 
         'rule_providers' => [
             \MSBios\Guard\Provider\RuleProvider::class => [
                 'allow' => [
-                    [['DEVELOPER'], Controller\ResourceController::class],
-                    [['DEVELOPER'], Controller\Resource\PermissionController::class],
-                    [['DEVELOPER'], Controller\RoleController::class],
-                    [['DEVELOPER'], Controller\RuleController::class],
-                    [['DEVELOPER'], Controller\UserController::class]
+                    [['DEVELOPER'], Mvc\Controller\ActionControllerInterface::class],
                 ],
                 'deny' => []
             ]
         ],
-    ],
-
-    Module::class => [
-        'listeners' => [
-        ]
     ],
 ];

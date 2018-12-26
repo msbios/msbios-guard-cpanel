@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MSBios Guard CPanel\n"
-"POT-Creation-Date: 2018-12-22 21:28+0200\n"
-"PO-Revision-Date: 2018-12-22 21:28+0200\n"
+"POT-Creation-Date: 2018-12-26 12:50+0200\n"
+"PO-Revision-Date: 2018-12-26 12:50+0200\n"
 "Last-Translator: \n"
 "Language-Team: MSBios Team <info@msbios.com>\n"
 "Language: ru_RU\n"
@@ -18,11 +18,11 @@ msgstr ""
 "X-Poedit-SearchPath-0: config\n"
 "X-Poedit-SearchPath-1: src\n"
 
-#: config/module.config.php:110
+#: config/module.config.php:108
 msgid "Access Control List"
 msgstr "Список контроля доступа"
 
-#: config/module.config.php:116
+#: config/module.config.php:115
 msgid "Users"
 msgstr "Пользователи"
 
@@ -38,47 +38,47 @@ msgstr "Изменить запись пользователя"
 msgid "Resources"
 msgstr "Ресурсы"
 
-#: config/module.config.php:135
+#: config/module.config.php:136
 msgid "Create new resource"
 msgstr "Создать новый ресурс"
 
-#: config/module.config.php:139
+#: config/module.config.php:140
 msgid "Edit user resource"
 msgstr "Редактировать пользовательский ресурс"
 
-#: config/module.config.php:143
+#: config/module.config.php:144
 msgid "Resource Permissions"
 msgstr "Разрешения для ресурсов"
 
-#: config/module.config.php:147
+#: config/module.config.php:148
 msgid "Create resource permission"
 msgstr "Создать разрешение ресурса"
 
-#: config/module.config.php:151
+#: config/module.config.php:152
 msgid "Edit resource permission"
 msgstr "Редагувати дозволи на ресурси"
 
-#: config/module.config.php:160
+#: config/module.config.php:161
 msgid "Roles"
 msgstr "Роли"
 
-#: config/module.config.php:164
+#: config/module.config.php:166
 msgid "Create new role"
 msgstr "Создать новую роль"
 
-#: config/module.config.php:168
+#: config/module.config.php:170
 msgid "Edit user role"
 msgstr "Изменить роль пользователя"
 
-#: config/module.config.php:175
+#: config/module.config.php:177
 msgid "Rules"
 msgstr "Правила"
 
-#: config/module.config.php:179
+#: config/module.config.php:182
 msgid "Create new rule"
 msgstr "Создать новое правило"
 
-#: config/module.config.php:183
+#: config/module.config.php:186
 msgid "Edit rule"
 msgstr "Изменить правило"
 
