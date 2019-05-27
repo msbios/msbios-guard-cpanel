@@ -115,79 +115,79 @@ return [
                         'label' => _('Users'),
                         'route' => 'cpanel/user',
                         'resource' => Controller\UserController::class,
-                        'pages' => [
-                            [
-                                'label' => _('Create new user'),
-                                'route' => 'cpanel/user',
-                                'action' => 'add'
-                            ], [
-                                'label' => _('Edit user record'),
-                                'route' => 'cpanel/user',
-                                'action' => 'edit'
-                            ],
-                        ]
+                        // 'pages' => [
+                        //     [
+                        //         'label' => _('Create new user'),
+                        //         'route' => 'cpanel/user',
+                        //         'action' => 'add'
+                        //     ], [
+                        //         'label' => _('Edit user record'),
+                        //         'route' => 'cpanel/user',
+                        //         'action' => 'edit'
+                        //     ],
+                        // ]
                     ],
                     'resource' => [
                         'label' => _('Resources'),
                         'route' => 'cpanel/resource',
                         'resource' => Controller\ResourceController::class,
-                        'pages' => [
-                            [
-                                'label' => _('Create new resource'),
-                                'route' => 'cpanel/resource',
-                                'action' => 'add'
-                            ], [
-                                'label' => _('Edit user resource'),
-                                'route' => 'cpanel/resource',
-                                'action' => 'edit'
-                            ], [
-                                'label' => _('Resource Permissions'),
-                                'route' => 'cpanel/resource-permission',
-                                'pages' => [
-                                    [
-                                        'label' => _('Create resource permission'),
-                                        'route' => 'cpanel/resource-permission',
-                                        'action' => 'add'
-                                    ], [
-                                        'label' => _('Edit resource permission'),
-                                        'route' => 'cpanel/resource-permission',
-                                        'action' => 'edit'
-                                    ],
-                                ]
-                            ],
-                        ]
+                        // 'pages' => [
+                        //     [
+                        //         'label' => _('Create new resource'),
+                        //         'route' => 'cpanel/resource',
+                        //         'action' => 'add'
+                        //     ], [
+                        //         'label' => _('Edit user resource'),
+                        //         'route' => 'cpanel/resource',
+                        //         'action' => 'edit'
+                        //     ], [
+                        //         'label' => _('Resource Permissions'),
+                        //         'route' => 'cpanel/resource-permission',
+                        //         'pages' => [
+                        //             [
+                        //                 'label' => _('Create resource permission'),
+                        //                 'route' => 'cpanel/resource-permission',
+                        //                 'action' => 'add'
+                        //             ], [
+                        //                 'label' => _('Edit resource permission'),
+                        //                 'route' => 'cpanel/resource-permission',
+                        //                 'action' => 'edit'
+                        //             ],
+                        //         ]
+                        //     ],
+                        // ]
                     ],
                     'role' => [
                         'label' => _('Roles'),
                         'route' => 'cpanel/role',
                         'resource' => Controller\RoleController::class,
-                        'pages' => [
-                            [
-                                'label' => _('Create new role'),
-                                'route' => 'cpanel/role',
-                                'action' => 'add'
-                            ], [
-                                'label' => _('Edit user role'),
-                                'route' => 'cpanel/role',
-                                'action' => 'edit'
-                            ],
-                        ]
+                            // 'pages' => [
+                            //     [
+                            //         'label' => _('Create new role'),
+                            //         'route' => 'cpanel/role',
+                            //         'action' => 'add'
+                            //     ], [
+                            //         'label' => _('Edit user role'),
+                            //         'route' => 'cpanel/role',
+                            //         'action' => 'edit'
+                            //     ],
+                            // ]
                     ],
                     'rule' => [
                         'label' => _('Rules'),
                         'route' => 'cpanel/rule',
                         'resource' => Controller\RuleController::class,
-                        'pages' => [
-                            [
-                                'label' => _('Create new rule'),
-                                'route' => 'cpanel/rule',
-                                'action' => 'add'
-                            ], [
-                                'label' => _('Edit rule'),
-                                'route' => 'cpanel/rule',
-                                'action' => 'edit'
-                            ],
-                        ]
+                            // 'pages' => [
+                            //     [
+                            //         'label' => _('Create new rule'),
+                            //         'route' => 'cpanel/rule',
+                            //         'action' => 'add'
+                            //     ], [
+                            //         'label' => _('Edit rule'),
+                            //         'route' => 'cpanel/rule',
+                            //         'action' => 'edit'
+                            //     ],
+                            // ]
                     ],
                 ],
             ],
