@@ -13,7 +13,7 @@ namespace MSBios\Guard\CPanel;
 class Module extends \MSBios\Module
 {
     /** @const VERSION */
-    const VERSION = '1.0.24';
+    const VERSION = '1.0.25';
 
     /**
      * @inheritdoc
